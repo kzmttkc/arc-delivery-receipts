@@ -1,0 +1,22 @@
+{
+ "payTo": "0x8e4A08ac4A195FA8BFd9d4573D4859A9C9882145",
+ "network": "eip155:5042",
+ "purchases": 1,
+ "charged": 0,
+ "delivered": 0,
+ "outcomes": {
+  "payment_not_accepted": 1
+ },
+ "lastChecked": "2026-09-28T05:27:52.094Z",
+ "evidence": [
+  {
+   "round": 3,
+   "index": 98,
+   "nonce": "0x92b2d3ab24f47a53df8b79f773c91153b9cfe05fadce2b7cc538e0abf55ae678",
+   "leaf": "0x92ff929352168a7cb86604511071612a3cf2d87dad151f83fce87870519588ef"
+  }
+ ],
+ "deliveryRate": null,
+ "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
+ "roundsFile": "rounds/3/records.json"
+}

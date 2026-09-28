@@ -1,0 +1,58 @@
+{
+ "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+ "network": "eip155:5042",
+ "purchases": 7,
+ "charged": 7,
+ "delivered": 7,
+ "outcomes": {
+  "delivered": 7
+ },
+ "lastChecked": "2026-09-28T05:26:52.887Z",
+ "evidence": [
+  {
+   "round": 3,
+   "index": 46,
+   "nonce": "0x9220d422f7d96ebf4d2ccc1b2f3ae4f4211eb8616b4889e699ce0dc07be5ee2f",
+   "leaf": "0x6b895c2e2aab79ce48eea79574430ec776a3e6a5fb5bd262f6b2fac374c25188"
+  },
+  {
+   "round": 3,
+   "index": 47,
+   "nonce": "0x8d1372ffb79eb7019c5dcc550a04ef843562ca950b956d951c04cc84f9f5da82",
+   "leaf": "0x1ed064bbef9ddf30aa793565d01fda0df736e973cf13f4ed4f47292c305f0cf2"
+  },
+  {
+   "round": 3,
+   "index": 48,
+   "nonce": "0x98b444fae4e0d08eb27811811b0213ba7993c8067b266ae20fba13c637fe04a8",
+   "leaf": "0x8e04fc12c551279795cb6a1cb8f55affb42527eb162587d2159ff58cda124b94"
+  },
+  {
+   "round": 3,
+   "index": 49,
+   "nonce": "0xcee334e2a03c48edb4950e7e7b34f90d598a275e23ed22afbd924eb84cf64929",
+   "leaf": "0x5a289d6e4c33463605ee1ed81b3233fd54f52fbc857465dc8a770cbb6aab2291"
+  },
+  {
+   "round": 3,
+   "index": 50,
+   "nonce": "0xcb1a1084c81887d71d81fa7ce3827023c0cff4c9710c0c7114c70cdfb3320cb8",
+   "leaf": "0x7f37c5c22422c5d3e4c7b1cba4c12c60725420f150a7a426831b47c1dc4de4fd"
+  },
+  {
+   "round": 3,
+   "index": 51,
+   "nonce": "0xf71d5b6cd8416ff62de30978f80070366f89b6e536322f9725d50e992ba14ada",
+   "leaf": "0x484b032a2807ce7242fda51065d7ac331a458aa9e96b587b628796fe0bbf57a4"
+  },
+  {
+   "round": 3,
+   "index": 52,
+   "nonce": "0x37175483ce4e522bff069d3e66f5028fc8ab3baf3efe1e5c33ecb87fa63cf82f",
+   "leaf": "0x0b27cbad3048b2cb1e1c0fc3d8c7a17a614a0cfbc32d70403bfa6901bd983c78"
+  }
+ ],
+ "deliveryRate": 1,
+ "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
+ "roundsFile": "rounds/3/records.json"
+}

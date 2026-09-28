@@ -1,6 +1,6 @@
 {
  "round": 2,
- "checkedAt": "2026-09-28T05:21:50.690Z",
+ "checkedAt": "2026-09-28T05:38:33.652Z",
  "counts": {
   "delivered": 31,
   "charged_then_rejected": 9,
@@ -17,7 +17,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -28,7 +28,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -39,7 +39,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -50,7 +50,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -61,7 +61,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -72,7 +72,7 @@
    "amount": "100000",
    "status": 400,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -83,7 +83,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -94,7 +94,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -105,7 +105,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -116,7 +116,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -127,7 +127,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -138,7 +138,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -149,7 +149,7 @@
    "amount": "100000",
    "status": 400,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -160,7 +160,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -171,7 +171,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -182,7 +182,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -193,7 +193,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -204,7 +204,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -215,7 +215,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -226,7 +226,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -237,7 +237,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -248,7 +248,7 @@
    "amount": "100000",
    "status": 422,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -259,7 +259,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -270,7 +270,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -281,7 +281,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -292,7 +292,7 @@
    "amount": "100000",
    "status": 422,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -303,7 +303,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -314,7 +314,7 @@
    "amount": "100000",
    "status": 404,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -325,7 +325,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -336,7 +336,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -347,7 +347,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -358,7 +358,7 @@
    "amount": "100000",
    "status": 400,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -369,7 +369,7 @@
    "amount": "100000",
    "status": 400,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -380,7 +380,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -391,7 +391,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -402,7 +402,7 @@
    "amount": "100000",
    "status": 400,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -413,7 +413,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -424,7 +424,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -435,7 +435,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -446,7 +446,7 @@
    "amount": "100000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_bad_response"
   },
@@ -457,7 +457,7 @@
    "amount": "100000",
    "status": 422,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "charged_then_rejected"
   },
@@ -468,7 +468,7 @@
    "amount": "7000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -479,7 +479,7 @@
    "amount": "5000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -622,7 +622,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -655,7 +655,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -666,7 +666,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -677,7 +677,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -688,7 +688,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -699,7 +699,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },
@@ -732,7 +732,7 @@
    "amount": "1000",
    "status": 200,
    "charged": true,
-   "settlementTx": null,
+   "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
    "outcome": "delivered"
   },

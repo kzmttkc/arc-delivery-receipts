@@ -1,0 +1,82 @@
+{
+ "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+ "network": "eip155:5042",
+ "purchases": 11,
+ "charged": 0,
+ "delivered": 0,
+ "outcomes": {
+  "served_not_charged": 11
+ },
+ "lastChecked": "2026-09-28T05:26:32.286Z",
+ "evidence": [
+  {
+   "round": 3,
+   "index": 35,
+   "nonce": "0x846de22fa8f85e58dd6d5376df7f679dc8f1738d69005e8fe4454bef16a76c40",
+   "leaf": "0xe65b239f31ab2124529c913f5f59e3aacadd5f22878c3bc1fabf5fc0c8f191ea"
+  },
+  {
+   "round": 3,
+   "index": 36,
+   "nonce": "0xbcc28985b04b8b2630afa141f3c1dbf2c9699aec50b285a635541874c5c4366b",
+   "leaf": "0xe376e4fd48e10aefff32b51522f325f4cb01c43d1139717adca9b075f511762e"
+  },
+  {
+   "round": 3,
+   "index": 37,
+   "nonce": "0x984d7f8d64382939aa463a526fefb1582707ab4b74e0a6adc6652cf50e915227",
+   "leaf": "0x52cc227af4b9fff269d2db99223c41092b0cce27a58315e05db37c1ad897ded0"
+  },
+  {
+   "round": 3,
+   "index": 38,
+   "nonce": "0x8aa370d96a3075cfc6a67f54fcfa75511233c3f6385dd7739234606f38376525",
+   "leaf": "0xd63ac1f458c56d89533d7a7bb0ec65c7a37cccb9c81c79f9115fa44fec15b165"
+  },
+  {
+   "round": 3,
+   "index": 39,
+   "nonce": "0x28c5c1e06a29c822774e5a62639e7b1ff5330c729b5983d822a4693e9f1734e9",
+   "leaf": "0xebc56581aca278b9f490cad7bd6cef48fc063f429671ba7ec65c9fc27f1f6b73"
+  },
+  {
+   "round": 3,
+   "index": 40,
+   "nonce": "0x15ce36e77ecc750b3219e9ec1c48dd33e0ba816963f7fb73502303c72bd66b3a",
+   "leaf": "0x69c38bb0dce03d742be75058679a9733aca457bf653247a37ab8632923a591ce"
+  },
+  {
+   "round": 3,
+   "index": 41,
+   "nonce": "0x748d37f78f542f7e028dd9ac45e63cd1a1d2b2b8a6ebf3d910575ba99fc86a94",
+   "leaf": "0x6b0e3f639b086a69cb0491b0e33140a26114be84008107d11c18e3a9100cbee1"
+  },
+  {
+   "round": 3,
+   "index": 42,
+   "nonce": "0xbac30242c2a65cf31d73048bb2f311a2a0771699249afc803f59c4dac3cd73d0",
+   "leaf": "0xf0c0ee4ebf1de1277011dd2e8b3e5541200b2c90431c520f140c4acf9a06d45d"
+  },
+  {
+   "round": 3,
+   "index": 43,
+   "nonce": "0x2b970dbb4135a5298007a9f101646dc6365197f0f9ce2ccf333d2a9c45cbfa68",
+   "leaf": "0x5c45eed8769310a0a96c497f3da6b8d93893403a74f5c8d1166237a8f0b18476"
+  },
+  {
+   "round": 3,
+   "index": 44,
+   "nonce": "0x8ff8f625a29e8a8b75b55f38d61a4925d881918031f8a51b135fc437071015c6",
+   "leaf": "0x0e9f74b5123d09a89df79713074e45c06afd4c267a6be185a51c025c0cb7c1ba"
+  },
+  {
+   "round": 3,
+   "index": 45,
+   "nonce": "0x8c6474ed189b05c6d373b495ab062769da7a8a6f9e851b0d18f0a16f369a7e94",
+   "leaf": "0xd4b789c619d9a370dec69415d6bb648ce3ef2e6fcd23ebc39424576930c3c646"
+  }
+ ],
+ "deliveryRate": null,
+ "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
+ "roundsFile": "rounds/3/records.json"
+}

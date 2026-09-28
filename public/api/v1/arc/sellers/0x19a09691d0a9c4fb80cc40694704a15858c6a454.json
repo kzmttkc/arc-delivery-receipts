@@ -1,0 +1,34 @@
+{
+ "payTo": "0x19a09691d0A9c4fB80Cc40694704a15858C6A454",
+ "network": "eip155:5042",
+ "purchases": 3,
+ "charged": 0,
+ "delivered": 0,
+ "outcomes": {
+  "payment_not_accepted": 3
+ },
+ "lastChecked": "2026-09-28T05:27:21.697Z",
+ "evidence": [
+  {
+   "round": 3,
+   "index": 70,
+   "nonce": "0xfd8926b4bbc8108c126e7640a538a5cfe80e101761e901d60f3049af5f6c2a6f",
+   "leaf": "0x52a0410cc1594642be81bdb2afe88e0b011d41f715c38b13f64c82882d46c060"
+  },
+  {
+   "round": 3,
+   "index": 71,
+   "nonce": "0x49c7b9c8b31f0a36e5e33b55eab772df163f3c572731e9907bd3f2ea8b79dbf8",
+   "leaf": "0x86e999d072ce448f3cfd36f892a9b6e37643e0e439344bb053fbf61c354bfaf1"
+  },
+  {
+   "round": 3,
+   "index": 72,
+   "nonce": "0xa375a1df3b3972bd304b863d40e2cf14cbcff1d065ddfdeccf713e25099e1cd6",
+   "leaf": "0xb692ddcfbddee4ec342cbceab406b8fa5bc7b9e14033464527c1c67c937f3826"
+  }
+ ],
+ "deliveryRate": null,
+ "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
+ "roundsFile": "rounds/3/records.json"
+}
