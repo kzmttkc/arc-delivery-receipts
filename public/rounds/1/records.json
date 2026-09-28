@@ -1,0 +1,148 @@
+{
+ "round": 1,
+ "root": "0x674cfe37e44d5802cafea66fff8b678dfbf86afa650e188ae160435782c4c14a",
+ "purchases": 3,
+ "delivered": 3,
+ "notBought": 0,
+ "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
+ "anchorTx": "0x3420d2a609f7dd8d63411441258b00808042ae7a07cd6f08984f6a9af755cd2f",
+ "records": [
+  {
+   "round": 1,
+   "index": 1,
+   "resource": "https://api.aisa.one/apis/v2/agentmail/domains",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "requestKind": "empty",
+   "resourceHash": "0xd6fa6bbc89bc5c0983f1553fa6402056407a54f0a4332f6599420fef70ef271f",
+   "requestHash": "0xf39731d537d2f93ec852135acd996fc198975c5030e31c4471e8b38dee649da9",
+   "startedAt": "2026-09-28T04:56:42.646Z",
+   "authorization": {
+    "from": "0xa65c4F0Ab6f61537D22a8E95b940E8bD634394fA",
+    "to": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+    "value": "100000",
+    "validAfter": "1790570802",
+    "validBefore": "1791176302",
+    "nonce": "0xb66e37c7cf081bea317d30c49cbc7dc0f8b0b2a2e30010817e2e6579a24f8207"
+   },
+   "signature": "0x64374d724a91aaf8f292d88deae055a8d54459d679ce4b1c9f6f72a5861005da14e262140b9b1abbb13bcf781c1ac3714150fbae6b69bf61e88d9f587590f5d21b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "status": 200,
+   "contentType": "application/json; charset=utf-8",
+   "responseBytes": 24,
+   "responseHash": "0xd4a387cd5cc32e213f66c4a9493bef39bdf8f9be0226dec60c534d68f0ee0606",
+   "settlement": {
+    "amount": "100000",
+    "network": "eip155:5042",
+    "payer": "0xa65c4f0ab6f61537d22a8e95b940e8bd634394fa",
+    "success": true,
+    "transaction": "5c115cbf-78e0-4a14-a270-3bda54505fca"
+   },
+   "stages": {
+    "http2xx": "pass",
+    "nonEmpty": "pass",
+    "mimeMatch": "pass",
+    "schemaMatch": "n/a"
+   },
+   "delivered": true,
+   "outcome": "delivered",
+   "finishedAt": "2026-09-28T04:56:44.836Z",
+   "leaf": "0x9ae110d7cbc4e789bc6b52c9c16403dcbb58fbdb487700f71e01e24d9779199f",
+   "proof": [
+    "0xdef022fe5d79066ec1bc43e79ce11438e3d2b876bcee8434c47c3999d6675c59",
+    "0x1629f9c36d308b4527d03339da55746da6d70a66f67565c5cd4c5dcbe03a553f"
+   ]
+  },
+  {
+   "round": 1,
+   "index": 2,
+   "resource": "https://api.aisa.one/apis/v2/agentmail/drafts",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "requestKind": "empty",
+   "resourceHash": "0x075d8c2dab3b503337a059926b45e17bfa18260226c310fe2de60573210491b7",
+   "requestHash": "0xef93e7929c3970a08033677f52f2e5a18354c127f9b7b469c0acf63daf35e3c9",
+   "startedAt": "2026-09-28T04:56:45.538Z",
+   "authorization": {
+    "from": "0xa65c4F0Ab6f61537D22a8E95b940E8bD634394fA",
+    "to": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+    "value": "100000",
+    "validAfter": "1790570805",
+    "validBefore": "1791176305",
+    "nonce": "0x3507f36cddd1ba1b50d166049969e7d03dc740c5dd726fd6aac783eeef532600"
+   },
+   "signature": "0x4734ed1527a4753024a1c0588d8176c2ad8b02cfee86a2c79154e1fedccce1435648652166b0b39ae7dc1a34a55d62f30c8f6d64311aa6eff815265e1ab549141c",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "status": 200,
+   "contentType": "application/json; charset=utf-8",
+   "responseBytes": 1030,
+   "responseHash": "0xee7d3f8dc5a7045fb82044a0960cc70517c466f8f4df56c3499cdf5739255389",
+   "settlement": {
+    "amount": "100000",
+    "network": "eip155:5042",
+    "payer": "0xa65c4f0ab6f61537d22a8e95b940e8bd634394fa",
+    "success": true,
+    "transaction": "9adb2d97-e18d-4237-b955-fa030586425c"
+   },
+   "stages": {
+    "http2xx": "pass",
+    "nonEmpty": "pass",
+    "mimeMatch": "pass",
+    "schemaMatch": "n/a"
+   },
+   "delivered": true,
+   "outcome": "delivered",
+   "finishedAt": "2026-09-28T04:56:46.967Z",
+   "leaf": "0xdef022fe5d79066ec1bc43e79ce11438e3d2b876bcee8434c47c3999d6675c59",
+   "proof": [
+    "0x9ae110d7cbc4e789bc6b52c9c16403dcbb58fbdb487700f71e01e24d9779199f",
+    "0x1629f9c36d308b4527d03339da55746da6d70a66f67565c5cd4c5dcbe03a553f"
+   ]
+  },
+  {
+   "round": 1,
+   "index": 3,
+   "resource": "https://api.aisa.one/apis/v2/agentmail/inboxes",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "requestKind": "empty",
+   "resourceHash": "0x992e20200b048dbd65121af2864d417ea666d3940782c614ba4100ed882e0311",
+   "requestHash": "0x6c74d4198e658ab19d03789c314958963af249f195789060e36d4520e000c5de",
+   "startedAt": "2026-09-28T04:56:47.669Z",
+   "authorization": {
+    "from": "0xa65c4F0Ab6f61537D22a8E95b940E8bD634394fA",
+    "to": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+    "value": "100000",
+    "validAfter": "1790570807",
+    "validBefore": "1791176307",
+    "nonce": "0x153ddc50b324e1a84ab96b2b909b90fe0804979b5936845d88f7e1f484b5b58b"
+   },
+   "signature": "0x1a5bcd451bfef85a4b192334da4735a21617e80884584b018a5f59407ded37cf3356e88c98e0ac7717e881e59cbfcde9cc20395030cc89cd1149a7a0495409231b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "status": 200,
+   "contentType": "application/json; charset=utf-8",
+   "responseBytes": 908,
+   "responseHash": "0x66e6a01beaba1f915e4b61e9d4f7acd54731613fee8dec437d91003407a73650",
+   "settlement": {
+    "amount": "100000",
+    "network": "eip155:5042",
+    "payer": "0xa65c4f0ab6f61537d22a8e95b940e8bd634394fa",
+    "success": true,
+    "transaction": "0db0a5f6-68fc-4fd0-9c81-cd58e39d520f"
+   },
+   "stages": {
+    "http2xx": "pass",
+    "nonEmpty": "pass",
+    "mimeMatch": "pass",
+    "schemaMatch": "n/a"
+   },
+   "delivered": true,
+   "outcome": "delivered",
+   "finishedAt": "2026-09-28T04:56:49.120Z",
+   "leaf": "0x1629f9c36d308b4527d03339da55746da6d70a66f67565c5cd4c5dcbe03a553f",
+   "proof": [
+    "0x71f7bfb6df33d97a895215b426db516cd91afe2897ba472be3808587098c628e"
+   ]
+  }
+ ]
+}

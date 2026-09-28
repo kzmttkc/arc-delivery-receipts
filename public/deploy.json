@@ -1,0 +1,7 @@
+{
+ "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
+ "deployTx": "0xcd62b20b154d12af3b45a9d4d940c99221afb6e53fd5d4378507af85c68ea931",
+ "recorder": "0xa65c4F0Ab6f61537D22a8E95b940E8bD634394fA",
+ "chainId": 5042,
+ "compiler": "0.8.28+commit.7893614a.Emscripten.clang"
+}
