@@ -1,0 +1,17 @@
+{
+  "name": "arc-delivery-receipts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@circle-fin/x402-batching": "^3.5.0",
+    "viem": "^2.56.9"
+  }
+}
