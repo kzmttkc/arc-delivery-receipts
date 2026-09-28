@@ -52,10 +52,31 @@ for (const r of paid) {
   if (t?.txHash && ['confirmed', 'completed'].includes(t.status)) byTx.set(t.txHash, (byTx.get(t.txHash) ?? 0n) + BigInt(r.authorization.value));
   else if (t) pending.push(`${r.index}:${t.status}`);
 }
-const charged = paid.filter((r) => gw[r.index]);
-const settled = charged.filter((r) => gw[r.index].txHash && ['confirmed', 'completed'].includes(gw[r.index].status));
+// Seller-declared prepaid balance (data/billing-models.json): a call is paid from the balance when Circle has
+// settled top-ups from this buyer to the same payTo that cover every call so far at the seller's published unit price.
+const models = fs.existsSync('data/billing-models.json') ? JSON.parse(fs.readFileSync('data/billing-models.json', 'utf8')) : [];
+const prepaid = {};
+for (const m of models.filter((x) => x.model === 'prepaid_balance')) {
+  const mine = paid.filter((r) => r.host === m.host);
+  for (const payTo of new Set(mine.map((r) => r.authorization.to.toLowerCase()))) {
+    const q = await fetch(`${GATEWAY_API}/x402/transfers?network=eip155:5042&from=${buyer}&to=${payTo}&pageSize=100`).then((x) => x.json()).catch(() => ({}));
+    const topUps = (q.transfers ?? []).filter((t) => ['confirmed', 'completed'].includes(t.status)).reduce((s, t) => s + BigInt(t.amount), 0n);
+    const calls = mine.filter((r) => r.authorization.to.toLowerCase() === payTo && r.status >= 200 && r.status < 300);
+    // calls in earlier rounds use the same balance, so count every 2xx call this buyer made to this payTo in any published round
+    let prior = 0;
+    for (const d of fs.readdirSync('public/rounds')) {
+      if (Number(d) >= round.round) continue;
+      const f = `public/rounds/${d}/records.json`; if (!fs.existsSync(f)) continue;
+      prior += JSON.parse(fs.readFileSync(f, 'utf8')).records.filter((r) => r.host === m.host && r.authorization?.to.toLowerCase() === payTo && r.status >= 200 && r.status < 300).length;
+    }
+    const covered = topUps >= BigInt((prior + calls.length) * m.unitAtomic);
+    for (const r of calls) if (!gw[r.index] && covered) prepaid[r.index] = { model: m.host, topUpsAtomic: topUps.toString(), callsCovered: prior + calls.length };
+  }
+}
+const charged = paid.filter((r) => gw[r.index] || prepaid[r.index]);
+const settled = charged.filter((r) => gw[r.index]?.txHash && ['confirmed', 'completed'].includes(gw[r.index].status));
 check('Circle Gateway record read for every authorization', Object.keys(gw).length === paid.length,
-  `charged ${charged.length} (settled ${settled.length} in ${byTx.size} batch tx${pending.length ? `, pending ${pending.length}` : ''}), not charged ${paid.length - charged.length}`);
+  `charged ${charged.length} (settled ${settled.length} in ${byTx.size} batch tx${pending.length ? `, pending ${pending.length}` : ''}${Object.keys(prepaid).length ? `, paid from a seller-declared prepaid balance ${Object.keys(prepaid).length}` : ''}), not charged ${paid.length - charged.length}`);
 
 // 4
 let debitOk = 0;
@@ -73,7 +94,7 @@ check("buyer's Gateway debit equals its charged authorizations in each batch", b
 const passedOf = (r) => r.passed ?? r.delivered;
 check('checks-passed count matches the on-chain count', paid.filter(passedOf).length === onchain.delivered, `${paid.filter(passedOf).length}/${paid.length}`);
 const verdicts = paid.map((r) => ({ index: r.index, host: r.host, payTo: r.authorization.to, amount: r.authorization.value, status: r.status,
-  charged: Boolean(gw[r.index]), settlementTx: gw[r.index]?.txHash ?? null, emptyResult: Boolean(r.emptyResult), validBefore: Number(r.authorization.validBefore), outcome: verdict({ status: r.status, passed: passedOf(r), validBefore: r.authorization.validBefore }, Boolean(gw[r.index])) }));
+  charged: Boolean(gw[r.index] || prepaid[r.index]), paidFrom: gw[r.index] ? 'settlement' : prepaid[r.index] ? 'prepaid_balance' : null, settlementTx: gw[r.index]?.txHash ?? null, emptyResult: Boolean(r.emptyResult), validBefore: Number(r.authorization.validBefore), outcome: verdict({ status: r.status, passed: passedOf(r), validBefore: r.authorization.validBefore }, Boolean(gw[r.index] || prepaid[r.index])) }));
 const count = verdicts.reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {});
 const del = verdicts.filter((v) => v.outcome === 'delivered').length, ch = verdicts.filter((v) => CHARGED_OUTCOMES.includes(v.outcome)).length;
 console.log(`verdicts ${JSON.stringify(count)}  delivery rate ${ch ? ((del / ch) * 100).toFixed(1) : '–'}% of charged (${del}/${ch})`);

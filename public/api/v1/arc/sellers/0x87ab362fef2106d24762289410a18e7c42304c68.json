@@ -2,10 +2,10 @@
  "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
  "network": "eip155:5042",
  "purchases": 11,
- "charged": 0,
- "delivered": 0,
+ "charged": 11,
+ "delivered": 11,
  "outcomes": {
-  "served_awaiting_settlement": 11
+  "delivered": 11
  },
  "lastChecked": "2026-09-28T05:26:32.286Z",
  "evidence": [
@@ -76,7 +76,7 @@
    "leaf": "0xd4b789c619d9a370dec69415d6bb648ce3ef2e6fcd23ebc39424576930c3c646"
   }
  ],
- "deliveryRate": null,
+ "deliveryRate": 1,
  "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
  "roundsFile": "rounds/3/records.json"
 }

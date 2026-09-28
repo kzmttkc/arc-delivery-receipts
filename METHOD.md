@@ -38,6 +38,11 @@ transfer for its nonce. Verdicts:
   authorization is still valid, so the seller may still settle it), `served_not_charged` (the same after the
   authorization expired), `failed_not_charged`. Verdicts are re-checked after every authorization in a round has expired
 
+Seller-declared prepaid balance: some sellers publish a billing model in which the 402 amount is a top-up and later
+calls are deducted from a balance without submitting each authorization to Circle (`data/billing-models.json`, with
+the seller's own documentation). A 2xx call to such a seller counts as charged (`paidFrom: prepaid_balance`) when
+Circle has settled top-ups from this buyer to the same `payTo` that cover every call so far at the published unit price.
+
 **Delivery rate = delivered / charged.** A seller that refuses a bad request without charging is not penalised.
 
 ## Receipts on Arc

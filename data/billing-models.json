@@ -1,0 +1,4 @@
+[
+  { "host": "edge.goldsky.com", "model": "prepaid_balance", "unitAtomic": 5,
+    "source": "https://docs.goldsky.com/edge-rpc/capabilities/x402 (read 2026-09-29): the 402 amount is a top-up (5000 atomic, ~1000 calls); later calls are deducted at 5 atomic each and their authorizations are not submitted to Circle" }
+]
