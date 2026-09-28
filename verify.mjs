@@ -73,7 +73,7 @@ check("buyer's Gateway debit equals its charged authorizations in each batch", b
 const passedOf = (r) => r.passed ?? r.delivered;
 check('checks-passed count matches the on-chain count', paid.filter(passedOf).length === onchain.delivered, `${paid.filter(passedOf).length}/${paid.length}`);
 const verdicts = paid.map((r) => ({ index: r.index, host: r.host, payTo: r.authorization.to, amount: r.authorization.value, status: r.status,
-  charged: Boolean(gw[r.index]), settlementTx: gw[r.index]?.txHash ?? null, emptyResult: Boolean(r.emptyResult), outcome: verdict({ status: r.status, passed: passedOf(r) }, Boolean(gw[r.index])) }));
+  charged: Boolean(gw[r.index]), settlementTx: gw[r.index]?.txHash ?? null, emptyResult: Boolean(r.emptyResult), validBefore: Number(r.authorization.validBefore), outcome: verdict({ status: r.status, passed: passedOf(r), validBefore: r.authorization.validBefore }, Boolean(gw[r.index])) }));
 const count = verdicts.reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {});
 const del = verdicts.filter((v) => v.outcome === 'delivered').length, ch = verdicts.filter((v) => CHARGED_OUTCOMES.includes(v.outcome)).length;
 console.log(`verdicts ${JSON.stringify(count)}  delivery rate ${ch ? ((del / ch) * 100).toFixed(1) : '–'}% of charged (${del}/${ch})`);

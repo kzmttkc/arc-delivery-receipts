@@ -1,11 +1,11 @@
 {
  "round": 2,
- "checkedAt": "2026-09-28T05:38:33.652Z",
+ "checkedAt": "2026-09-28T08:00:45.327Z",
  "counts": {
   "delivered": 31,
   "charged_then_rejected": 9,
   "charged_bad_response": 10,
-  "served_not_charged": 10,
+  "served_awaiting_settlement": 10,
   "refused_not_charged": 83,
   "payment_not_accepted": 21
  },
@@ -19,6 +19,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177313,
    "outcome": "delivered"
   },
   {
@@ -30,6 +31,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177315,
    "outcome": "delivered"
   },
   {
@@ -41,6 +43,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177317,
    "outcome": "delivered"
   },
   {
@@ -52,6 +55,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177319,
    "outcome": "delivered"
   },
   {
@@ -63,6 +67,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177322,
    "outcome": "delivered"
   },
   {
@@ -74,6 +79,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177323,
    "outcome": "charged_then_rejected"
   },
   {
@@ -85,6 +91,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177326,
    "outcome": "delivered"
   },
   {
@@ -96,6 +103,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177328,
    "outcome": "delivered"
   },
   {
@@ -107,6 +115,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177330,
    "outcome": "delivered"
   },
   {
@@ -118,6 +127,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177332,
    "outcome": "delivered"
   },
   {
@@ -129,6 +139,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177334,
    "outcome": "delivered"
   },
   {
@@ -140,6 +151,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177336,
    "outcome": "charged_bad_response"
   },
   {
@@ -151,6 +163,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177338,
    "outcome": "charged_then_rejected"
   },
   {
@@ -162,6 +175,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177340,
    "outcome": "delivered"
   },
   {
@@ -173,6 +187,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177342,
    "outcome": "delivered"
   },
   {
@@ -184,6 +199,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177344,
    "outcome": "delivered"
   },
   {
@@ -195,6 +211,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177346,
    "outcome": "delivered"
   },
   {
@@ -206,6 +223,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177347,
    "outcome": "delivered"
   },
   {
@@ -217,6 +235,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177349,
    "outcome": "delivered"
   },
   {
@@ -228,6 +247,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177351,
    "outcome": "delivered"
   },
   {
@@ -239,6 +259,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177353,
    "outcome": "delivered"
   },
   {
@@ -250,6 +271,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177355,
    "outcome": "charged_then_rejected"
   },
   {
@@ -261,6 +283,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177357,
    "outcome": "delivered"
   },
   {
@@ -272,6 +295,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177359,
    "outcome": "delivered"
   },
   {
@@ -283,6 +307,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177361,
    "outcome": "delivered"
   },
   {
@@ -294,6 +319,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177363,
    "outcome": "charged_then_rejected"
   },
   {
@@ -305,6 +331,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177365,
    "outcome": "delivered"
   },
   {
@@ -316,6 +343,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177367,
    "outcome": "charged_then_rejected"
   },
   {
@@ -327,6 +355,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177369,
    "outcome": "charged_bad_response"
   },
   {
@@ -338,6 +367,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177371,
    "outcome": "charged_bad_response"
   },
   {
@@ -349,6 +379,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177373,
    "outcome": "charged_bad_response"
   },
   {
@@ -360,6 +391,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177375,
    "outcome": "charged_then_rejected"
   },
   {
@@ -371,6 +403,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177378,
    "outcome": "charged_then_rejected"
   },
   {
@@ -382,6 +415,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177380,
    "outcome": "charged_bad_response"
   },
   {
@@ -393,6 +427,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177382,
    "outcome": "charged_bad_response"
   },
   {
@@ -404,6 +439,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177384,
    "outcome": "charged_then_rejected"
   },
   {
@@ -415,6 +451,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177386,
    "outcome": "charged_bad_response"
   },
   {
@@ -426,6 +463,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177388,
    "outcome": "charged_bad_response"
   },
   {
@@ -437,6 +475,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177391,
    "outcome": "charged_bad_response"
   },
   {
@@ -448,6 +487,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177393,
    "outcome": "charged_bad_response"
   },
   {
@@ -459,6 +499,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177395,
    "outcome": "charged_then_rejected"
   },
   {
@@ -470,6 +511,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177398,
    "outcome": "delivered"
   },
   {
@@ -481,6 +523,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791177400,
    "outcome": "delivered"
   },
   {
@@ -492,7 +535,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177401,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 46,
@@ -503,7 +547,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177403,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 47,
@@ -514,7 +559,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177404,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 48,
@@ -525,7 +571,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177405,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 49,
@@ -536,7 +583,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177406,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 50,
@@ -547,7 +595,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177407,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 51,
@@ -558,7 +607,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177408,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 52,
@@ -569,7 +619,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177410,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 53,
@@ -580,7 +631,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177410,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 54,
@@ -591,7 +643,8 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
-   "outcome": "served_not_charged"
+   "validBefore": 1791177411,
+   "outcome": "served_awaiting_settlement"
   },
   {
    "index": 55,
@@ -602,6 +655,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791263713,
    "outcome": "refused_not_charged"
   },
   {
@@ -613,6 +667,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791263715,
    "outcome": "refused_not_charged"
   },
   {
@@ -624,6 +679,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263716,
    "outcome": "delivered"
   },
   {
@@ -635,6 +691,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791263718,
    "outcome": "refused_not_charged"
   },
   {
@@ -646,6 +703,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791263719,
    "outcome": "refused_not_charged"
   },
   {
@@ -657,6 +715,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263720,
    "outcome": "delivered"
   },
   {
@@ -668,6 +727,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263722,
    "outcome": "delivered"
   },
   {
@@ -679,6 +739,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263730,
    "outcome": "delivered"
   },
   {
@@ -690,6 +751,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263731,
    "outcome": "delivered"
   },
   {
@@ -701,6 +763,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263733,
    "outcome": "delivered"
   },
   {
@@ -712,6 +775,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791263735,
    "outcome": "refused_not_charged"
   },
   {
@@ -723,6 +787,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791263736,
    "outcome": "refused_not_charged"
   },
   {
@@ -734,6 +799,7 @@
    "charged": true,
    "settlementTx": "0x3a78bad401267d8f0914878db7b15e81a27b44637330f619eefef863209d6616",
    "emptyResult": false,
+   "validBefore": 1791263737,
    "outcome": "delivered"
   },
   {
@@ -745,6 +811,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177440,
    "outcome": "refused_not_charged"
   },
   {
@@ -756,6 +823,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177441,
    "outcome": "payment_not_accepted"
   },
   {
@@ -767,6 +835,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177443,
    "outcome": "payment_not_accepted"
   },
   {
@@ -778,6 +847,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177444,
    "outcome": "payment_not_accepted"
   },
   {
@@ -789,6 +859,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177446,
    "outcome": "refused_not_charged"
   },
   {
@@ -800,6 +871,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177447,
    "outcome": "refused_not_charged"
   },
   {
@@ -811,6 +883,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177448,
    "outcome": "refused_not_charged"
   },
   {
@@ -822,6 +895,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177450,
    "outcome": "refused_not_charged"
   },
   {
@@ -833,6 +907,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177451,
    "outcome": "refused_not_charged"
   },
   {
@@ -844,6 +919,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177452,
    "outcome": "refused_not_charged"
   },
   {
@@ -855,6 +931,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177454,
    "outcome": "refused_not_charged"
   },
   {
@@ -866,6 +943,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177455,
    "outcome": "refused_not_charged"
   },
   {
@@ -877,6 +955,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177457,
    "outcome": "refused_not_charged"
   },
   {
@@ -888,6 +967,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177458,
    "outcome": "refused_not_charged"
   },
   {
@@ -899,6 +979,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177459,
    "outcome": "refused_not_charged"
   },
   {
@@ -910,6 +991,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177460,
    "outcome": "refused_not_charged"
   },
   {
@@ -921,6 +1003,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177462,
    "outcome": "refused_not_charged"
   },
   {
@@ -932,6 +1015,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177463,
    "outcome": "refused_not_charged"
   },
   {
@@ -943,6 +1027,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177464,
    "outcome": "refused_not_charged"
   },
   {
@@ -954,6 +1039,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177465,
    "outcome": "refused_not_charged"
   },
   {
@@ -965,6 +1051,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177467,
    "outcome": "refused_not_charged"
   },
   {
@@ -976,6 +1063,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177468,
    "outcome": "refused_not_charged"
   },
   {
@@ -987,6 +1075,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177470,
    "outcome": "refused_not_charged"
   },
   {
@@ -998,6 +1087,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177471,
    "outcome": "refused_not_charged"
   },
   {
@@ -1009,6 +1099,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177472,
    "outcome": "refused_not_charged"
   },
   {
@@ -1020,6 +1111,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177474,
    "outcome": "refused_not_charged"
   },
   {
@@ -1031,6 +1123,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177475,
    "outcome": "refused_not_charged"
   },
   {
@@ -1042,6 +1135,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177476,
    "outcome": "refused_not_charged"
   },
   {
@@ -1053,6 +1147,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177477,
    "outcome": "refused_not_charged"
   },
   {
@@ -1064,6 +1159,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177478,
    "outcome": "refused_not_charged"
   },
   {
@@ -1075,6 +1171,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177479,
    "outcome": "refused_not_charged"
   },
   {
@@ -1086,6 +1183,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177481,
    "outcome": "refused_not_charged"
   },
   {
@@ -1097,6 +1195,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177482,
    "outcome": "refused_not_charged"
   },
   {
@@ -1108,6 +1207,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177483,
    "outcome": "refused_not_charged"
   },
   {
@@ -1119,6 +1219,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177484,
    "outcome": "refused_not_charged"
   },
   {
@@ -1130,6 +1231,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177485,
    "outcome": "refused_not_charged"
   },
   {
@@ -1141,6 +1243,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177486,
    "outcome": "refused_not_charged"
   },
   {
@@ -1152,6 +1255,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177487,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1163,6 +1267,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177489,
    "outcome": "refused_not_charged"
   },
   {
@@ -1174,6 +1279,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177490,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1185,6 +1291,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177491,
    "outcome": "refused_not_charged"
   },
   {
@@ -1196,6 +1303,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177492,
    "outcome": "refused_not_charged"
   },
   {
@@ -1207,6 +1315,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177494,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1218,6 +1327,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177495,
    "outcome": "refused_not_charged"
   },
   {
@@ -1229,6 +1339,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177496,
    "outcome": "refused_not_charged"
   },
   {
@@ -1240,6 +1351,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177498,
    "outcome": "refused_not_charged"
   },
   {
@@ -1251,6 +1363,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177499,
    "outcome": "refused_not_charged"
   },
   {
@@ -1262,6 +1375,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177500,
    "outcome": "refused_not_charged"
   },
   {
@@ -1273,6 +1387,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177501,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1284,6 +1399,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177503,
    "outcome": "refused_not_charged"
   },
   {
@@ -1295,6 +1411,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177504,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1306,6 +1423,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177506,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1317,6 +1435,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177507,
    "outcome": "refused_not_charged"
   },
   {
@@ -1328,6 +1447,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177508,
    "outcome": "refused_not_charged"
   },
   {
@@ -1339,6 +1459,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177509,
    "outcome": "refused_not_charged"
   },
   {
@@ -1350,6 +1471,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177511,
    "outcome": "refused_not_charged"
   },
   {
@@ -1361,6 +1483,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177512,
    "outcome": "refused_not_charged"
   },
   {
@@ -1372,6 +1495,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177513,
    "outcome": "refused_not_charged"
   },
   {
@@ -1383,6 +1507,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177514,
    "outcome": "refused_not_charged"
   },
   {
@@ -1394,6 +1519,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177515,
    "outcome": "refused_not_charged"
   },
   {
@@ -1405,6 +1531,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177517,
    "outcome": "refused_not_charged"
   },
   {
@@ -1416,6 +1543,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177518,
    "outcome": "refused_not_charged"
   },
   {
@@ -1427,6 +1555,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177519,
    "outcome": "refused_not_charged"
   },
   {
@@ -1438,6 +1567,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177520,
    "outcome": "refused_not_charged"
   },
   {
@@ -1449,6 +1579,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177521,
    "outcome": "refused_not_charged"
   },
   {
@@ -1460,6 +1591,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177523,
    "outcome": "refused_not_charged"
   },
   {
@@ -1471,6 +1603,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177524,
    "outcome": "refused_not_charged"
   },
   {
@@ -1482,6 +1615,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177525,
    "outcome": "refused_not_charged"
   },
   {
@@ -1493,6 +1627,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177526,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1504,6 +1639,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177528,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1515,6 +1651,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177529,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1526,6 +1663,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177531,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1537,6 +1675,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177532,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1548,6 +1687,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177533,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1559,6 +1699,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177534,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1570,6 +1711,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177536,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1581,6 +1723,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177537,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1592,6 +1735,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177538,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1603,6 +1747,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177539,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1614,6 +1759,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177541,
    "outcome": "refused_not_charged"
   },
   {
@@ -1625,6 +1771,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177542,
    "outcome": "refused_not_charged"
   },
   {
@@ -1636,6 +1783,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177543,
    "outcome": "refused_not_charged"
   },
   {
@@ -1647,6 +1795,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177544,
    "outcome": "refused_not_charged"
   },
   {
@@ -1658,6 +1807,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177546,
    "outcome": "refused_not_charged"
   },
   {
@@ -1669,6 +1819,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177547,
    "outcome": "refused_not_charged"
   },
   {
@@ -1680,6 +1831,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177548,
    "outcome": "refused_not_charged"
   },
   {
@@ -1691,6 +1843,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177549,
    "outcome": "refused_not_charged"
   },
   {
@@ -1702,6 +1855,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177550,
    "outcome": "refused_not_charged"
   },
   {
@@ -1713,6 +1867,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177551,
    "outcome": "refused_not_charged"
   },
   {
@@ -1724,6 +1879,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177552,
    "outcome": "refused_not_charged"
   },
   {
@@ -1735,6 +1891,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177554,
    "outcome": "refused_not_charged"
   },
   {
@@ -1746,6 +1903,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177555,
    "outcome": "refused_not_charged"
   },
   {
@@ -1757,6 +1915,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177556,
    "outcome": "refused_not_charged"
   },
   {
@@ -1768,6 +1927,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177557,
    "outcome": "refused_not_charged"
   },
   {
@@ -1779,6 +1939,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177558,
    "outcome": "payment_not_accepted"
   },
   {
@@ -1790,6 +1951,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177559,
    "outcome": "refused_not_charged"
   },
   {
@@ -1801,6 +1963,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177561,
    "outcome": "refused_not_charged"
   },
   {
@@ -1812,6 +1975,7 @@
    "charged": false,
    "settlementTx": null,
    "emptyResult": false,
+   "validBefore": 1791177562,
    "outcome": "refused_not_charged"
   }
  ]

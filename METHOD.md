@@ -34,7 +34,9 @@ transfer for its nonce. Verdicts:
 - charged: `delivered` (all checks pass), `charged_bad_response`, `charged_then_rejected` (4xx), `charged_server_error`,
   `charged_no_response`
 - not charged: `refused_not_charged` (4xx without charging, the correct way to refuse a bad request),
-  `payment_not_accepted` (402 again), `served_not_charged` (content returned, no transfer), `failed_not_charged`
+  `payment_not_accepted` (402 again), `served_awaiting_settlement` (content returned, no transfer yet, and the signed
+  authorization is still valid, so the seller may still settle it), `served_not_charged` (the same after the
+  authorization expired), `failed_not_charged`. Verdicts are re-checked after every authorization in a round has expired
 
 **Delivery rate = delivered / charged.** A seller that refuses a bad request without charging is not penalised.
 

@@ -35,7 +35,7 @@
   "charged": 0,
   "delivered": 0,
   "outcomes": {
-   "served_not_charged": 11
+   "served_awaiting_settlement": 11
   },
   "lastChecked": "2026-09-28T05:26:32.286Z",
   "deliveryRate": null,

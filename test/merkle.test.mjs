@@ -45,4 +45,6 @@ test('checks and charge-aware verdicts', () => {
   assert.equal(verdict({ status: 400, passed: false }, false), 'refused_not_charged');
   assert.equal(verdict({ status: 402, passed: false }, false), 'payment_not_accepted');
   assert.equal(verdict({ status: 200, passed: true }, false), 'served_not_charged');
+  assert.equal(verdict({ status: 200, passed: true, validBefore: 2000 }, false, 1000), 'served_awaiting_settlement');
+  assert.equal(verdict({ status: 200, passed: true, validBefore: 2000 }, false, 3000), 'served_not_charged');
 });
