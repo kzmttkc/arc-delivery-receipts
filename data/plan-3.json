@@ -1,0 +1,2798 @@
+{
+ "builtAt": "2026-09-28T05:20:36.701Z",
+ "method": "v1",
+ "purchases": 99,
+ "costUSDC": "7236000",
+ "items": [
+  {
+   "resource": "https://api.aisa.one/apis/v2/agentmail/domains",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/agentmail/drafts",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/agentmail/inboxes",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/agentmail/metrics",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/agentmail/threads",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/account_stages",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/contact_stages",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/email_accounts",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/emailer_messages/search",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/fields",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/labels",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/opportunities/search",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/opportunity_stages",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/phone_calls/search",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/typed_custom_fields",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/users/search",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/coins/categories",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/coins/categories/list",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/coins/list",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/exchanges",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/exchanges/list",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/search/trending",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/simple/supported_vs_currencies",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/air-quality",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/archive",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/climate",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/flood",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/forecast",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/historical-forecast",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/marine",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/previous-runs",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/seasonal",
+   "host": "api.aisa.one",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "100000",
+   "payTo": "0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://api.exa.ai/contents",
+   "host": "api.exa.ai",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "urls": [
+      "https://example.com"
+     ],
+     "text": true
+    }
+   },
+   "amount": "0",
+   "payTo": "0xB98eF29eb2be19Ae646A8FC0248255B90A332dbC",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "type": "json",
+    "example": {
+     "results": [
+      {
+       "url": "https://example.com",
+       "title": "Example",
+       "text": "Page content..."
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": "https://api.exa.ai/search",
+   "host": "api.exa.ai",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "query": "example search query",
+     "numResults": 10,
+     "type": "auto"
+    }
+   },
+   "amount": "7000",
+   "payTo": "0xB98eF29eb2be19Ae646A8FC0248255B90A332dbC",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "type": "json",
+    "example": {
+     "results": [
+      {
+       "url": "https://example.com",
+       "title": "Example",
+       "score": 0.99
+      }
+     ]
+    }
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/1",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/10",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/1301",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/1329",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/137",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/146",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/42161",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/43114",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/480",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/8453",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://edge.goldsky.com/standard/evm/998",
+   "host": "edge.goldsky.com",
+   "method": "POST",
+   "request": {
+    "kind": "declared",
+    "body": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "method": "eth_blockNumber",
+     "params": []
+    }
+   },
+   "amount": "5000",
+   "payTo": "0x87aB362fEF2106d24762289410a18e7c42304C68",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": {
+    "example": {
+     "id": 1,
+     "jsonrpc": "2.0",
+     "result": "0x188c81c"
+    },
+    "type": "json"
+   }
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/kalshi/markets",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/cohorts/stats",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/crypto-updown",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/events",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/leaderboard",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/markets",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/positions",
+   "host": "nano.blockrun.ai",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "1000",
+   "payTo": "0x6E007731870EDe419CfB31889Cd5C4493CEcb04c",
+   "verifyingContract": "0x77777777Dcc4d5A8B6E418Fd04D8997ef11000eE",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/andi/v1/search",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "q": "react hooks tutorial"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x09CBbB451Ca48ed511c7fc07eD921d539CdE1227",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/enrich",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "120000",
+   "payTo": "0x3078368e0740fa5F8d9B900ea428C946a1006cb7",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/email",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0x3078368e0740fa5F8d9B900ea428C946a1006cb7",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/enrich",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "30000",
+   "payTo": "0x3078368e0740fa5F8d9B900ea428C946a1006cb7",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/fonts",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "domain": "example.com"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/retrieve",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "domain": "example.com"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/retrieve-by-email",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "email": "contact@example.com"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/retrieve-by-isin",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "isin": "AU000000IMD5"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/retrieve-by-name",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "name": "Apple Inc"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/retrieve-by-ticker",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "ticker": "AAPL"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/retrieve-simplified",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "domain": "example.com"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/screenshot",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "domain": "example.com"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/styleguide",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "domain": "example.com"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/screenshot",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/styleguide",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "30000",
+   "payTo": "0x9f7556c65392E5cBCB342010618C2b407E64A8EA",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/crustdata/screener/company",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "313000",
+   "payTo": "0x68E8bCC127cd079a79A48e9B7Fa3934DE40a2443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/technologies/search",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "q": "React"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "1000",
+   "payTo": "0x24a5Ec14De5DBf0eD1e27784D63D22DC9451998F",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/peopledatalabs/v5/company/enrich",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "110000",
+   "payTo": "0x19a09691d0A9c4fB80Cc40694704a15858C6A454",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/peopledatalabs/v5/person/enrich",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "350000",
+   "payTo": "0x19a09691d0A9c4fB80Cc40694704a15858C6A454",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/peopledatalabs/v5/person/identify",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "700000",
+   "payTo": "0x19a09691d0A9c4fB80Cc40694704a15858C6A454",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/cloud-cover-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-10-01",
+     "end": "2025-10-31",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/daily",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2024-01-04",
+     "end": "2024-02-04",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2024-01-04",
+     "end": "2024-02-04",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/last-48",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/recent-rain",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/relative-humidity-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-10-01",
+     "end": "2025-10-31",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/soil-moisture-daily",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/soil-moisture-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/solar-radiation-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-10-15",
+     "end": "2025-10-31",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/specific-humidity-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/temp-0-10cm-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/temperature-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/wind-direction-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/wind-speed-gust-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/precip/api/v1/wind-speed-hourly",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "declared",
+    "query": {
+     "start": "2025-06-01",
+     "end": "2025-06-30",
+     "longitude": "-122.42616,-71.06053,-90.07447",
+     "latitude": "37.75750,42.35355,29.97991"
+    },
+    "source": "seller 4xx input spec (uncharged)"
+   },
+   "amount": "10000",
+   "payTo": "0x6013D764502369012dF405A21C7DCBb6eFD1507b",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/financing_events",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/job_openings",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/news_events",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/portfolio_companies/connections",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/products/latest",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/startup_platform_posts",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/technologies",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "40000",
+   "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/rocketreach/company/lookup/",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "500000",
+   "payTo": "0x8666a0796297de08364E0C8CDA235463A79De43c",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/rocketreach/person/lookup",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "500000",
+   "payTo": "0x8666a0796297de08364E0C8CDA235463A79De43c",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/rocketreach/profile-company/lookup",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "500000",
+   "payTo": "0x8666a0796297de08364E0C8CDA235463A79De43c",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/tako/v1/tako_tools_description",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "23000",
+   "payTo": "0x8e4A08ac4A195FA8BFd9d4573D4859A9C9882145",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/phone-finder",
+   "host": "np.orthogonal.com",
+   "method": "GET",
+   "request": {
+    "kind": "empty"
+   },
+   "amount": "10000",
+   "payTo": "0xaC9ad2609466fB92C69640fa2b9Ee7B22a76E8fe",
+   "verifyingContract": "0x77777777dcc4d5a8b6e418fd04d8997ef11000ee",
+   "mimeType": "application/json",
+   "outputSchema": null
+  }
+ ],
+ "notBought": [
+  {
+   "resource": "https://api.aisa.one/apis/v2/anthropic-websearch/search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/accounts/search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/contacts/search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/emailer_campaigns/search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/mixed_people/api_search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/reports/sync_report",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/tasks/search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/usage_stats/api_usage_stats",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openai-websearch/search",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/twitter/upload_media",
+   "host": "api.aisa.one",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/audio/generations",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/chat/completions",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/images/generations",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/images/image2image",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/messages",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/modal/sandbox/exec",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/modal/sandbox/terminate",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/phone/lookup",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/phone/lookup/fraud",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/phone/numbers/list",
+   "host": "nano.blockrun.ai",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/phone/numbers/release",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/search",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/videos/generations",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/voice/call",
+   "host": "nano.blockrun.ai",
+   "reason": "no 402 (HTTP 400)"
+  },
+  {
+   "resource": "https://np.orthogonal.com/agentphone/v1/calls",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/agentphone/v1/messages",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/apollo/api/v1/mixed_companies/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/apollo/api/v1/mixed_people/api_search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/apollo/api/v1/news_articles/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/apollo/api/v1/organizations/bulk_enrich",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/apollo/api/v1/people/bulk_match",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/apollo/api/v1/people/match",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/acquisitions",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/employees",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/founders",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/funding-rounds",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/funds",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/investments",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/investments/funds",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/company/investments/outbound",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/geocoder/search",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/marketmap/generate",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/founded-companies",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/investments/companies",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/investments/funds",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/simple/search",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/aviato/person/vestings",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/baseten/v1/chat/completions",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/ai/products",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/ai/query",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/b2b-enrich",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/b2b-search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/contacts/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/contacts/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/crawl/batch",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/crawl/extract",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/crawl/intel",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/crawl/map",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/crawl/scrape",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/crawl/snapshot",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/signals/acquisitions",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/signals/funding",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/v1/apps/meeting-prep",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/v1/apps/roi-calculator",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/bytemine/v1/proposals/generate",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/company-enrich/companies/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/company-enrich/companies/search/scroll",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/company-enrich/people/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/company-enrich/people/search/scroll",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/contactout/v1/domain/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/contactout/v1/people/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/contactout/v1/people/linkedin/batch",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/ai/product",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/ai/query",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/prefetch",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/prefetch-by-email",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/people/retrieve",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/company_base/search/filter",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/company_base/search/filter/preview",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/employee_base/search/filter",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/employee_base/search/filter/preview",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/employee_post/search/filter",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/job_base/search/filter",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/job_base/search/filter/preview",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/crustdata/data_lab/gartner_reviews/Table/",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/crustdata/data_lab/job_listings/Table/",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/crustdata/screener/companydb/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/crustdata/screener/identify/",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/crustdata/screener/persondb/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/didit/v3/aml",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/edges/actions/linkedin-find-company-url/run/live",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/fiber/v1/people-search/count",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/intellimatch/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/lookalike/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/search/business-profile",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/search/company",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/search/domain",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/search/name",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/search/reverse-email",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/technologies",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/findymail/api/verify",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/happenstance/v1/research",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/bulk-search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/domain-search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/email-search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/email-verification",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/find-companies",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/find-people",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/reverse-email-lookup",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/reverse-email-lookups",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/url-search/company",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/url-search/profile",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/influencers-club/public/v1/creators/audience/overlap/",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/influencers-club/public/v1/creators/enrich/handle/raw/",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/linkup/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/notte/agents/start",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/notte/scrape",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/notte/scrape_from_html",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/notte/sessions/start",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/nyne/company/enrichment",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/ocean-io/v2/enrich/company",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/ocean-io/v2/enrich/person",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/ocean-io/v2/lookup/companies",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/ocean-io/v2/lookup/people",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/olostep/v1/answers",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/olostep/v1/batches",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/olostep/v1/crawls",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/olostep/v1/maps",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/olostep/v1/scrapes",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/openfunnel/api/v1/enrich/deep-enrich",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/openmart/api/v1/enrich_company",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/openmart/api/v1/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/openmart/api/v1/search/only_ids",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/peopledatalabs/v5/company/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/peopledatalabs/v5/person/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/riveter/v1/run",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/riveter/v1/scrape",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/rocketreach/person/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/rocketreach/searchCompany",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/scrapecreators/v1/amazon/shop",
+   "host": "np.orthogonal.com",
+   "reason": "GET needs inputs the seller did not declare"
+  },
+  {
+   "resource": "https://np.orthogonal.com/scrapegraphai/api/crawl",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/scrapegraphai/api/extract",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/scrapegraphai/api/monitor",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/scrapegraphai/api/scrape",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/scrapegraphai/api/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/seltz/v1/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/autocomplete",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/images",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/lens",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/maps",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/news",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/patents",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/places",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/reviews",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/scholar",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper-scrape/",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/shopping",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/serper/videos",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/sixtyfour/find-email",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tako/v1/beta/visualize",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tako/v1/knowledge_search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tavily/crawl",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tavily/extract",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tavily/map",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tavily/research",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tavily/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/reveal/search",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://np.orthogonal.com/voygr/v1/business-status",
+   "host": "np.orthogonal.com",
+   "reason": "POST without a declared request body"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/agentmail/threads/search",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/apollo/notes",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/coins/markets",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/coingecko/simple/price",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/edinet/documents.json",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/elevation",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/ensemble",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/openmeteo/geocoding",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://api.aisa.one/apis/v2/tikhub/youtube/web_v2/get_video_captions_result",
+   "host": "api.aisa.one",
+   "reason": "charged for a request it then rejected in round 2; required input has no declared example"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/binance/candles/BTCUSDT",
+   "host": "nano.blockrun.ai",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/binance/ticks/ETHUSDT",
+   "host": "nano.blockrun.ai",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/kalshi/orderbooks",
+   "host": "nano.blockrun.ai",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/activity",
+   "host": "nano.blockrun.ai",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/markets/smart-activity",
+   "host": "nano.blockrun.ai",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://nano.blockrun.ai/api/v1/pm/polymarket/orderbooks",
+   "host": "nano.blockrun.ai",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/naics",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/brand-dev/v1/brand/transaction_identifier",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/captaindata/companies/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/captaindata/companies/find",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/captaindata/people/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/captaindata/people/find",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/company-enrich/companies/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/contactout/v1/email/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/contactout/v1/linkedin/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/contactout/v1/people/linkedin",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/retrieve",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/retrieve-by-email",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/retrieve-by-isin",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/retrieve-by-name",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/retrieve-by-ticker",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/retrieve-simplified",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/brand/transaction_identifier",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/competitors",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/fonts",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/naics",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/scrape/html",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/scrape/images",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/scrape/markdown",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/scrape/sitemap",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/context-dev/web/sic",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/company_clean/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/coresignal/v2/company_multi_source/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/fantastic-jobs/v1/active-ats",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/fantastic-jobs/v1/active-jb",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/scrape/company",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/icypeas/api/scrape/profile",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/peopledatalabs/v5/ip/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/predictleads/v3/discover/companies",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/author-finder",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/combined/find",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/companies/find",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/domain-search",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/domain-status",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/domain-suggestions",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/email-count",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/email-finder",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/email-format",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/email-sources",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/email-verifier",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/enrich",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/linkedin",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/location",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/people/find",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/phone-validator",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/similar",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  },
+  {
+   "resource": "https://np.orthogonal.com/tomba/v1/technology",
+   "host": "np.orthogonal.com",
+   "reason": "required input without a declared example"
+  }
+ ]
+}

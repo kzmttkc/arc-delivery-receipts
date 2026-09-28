@@ -2,13 +2,14 @@
 // Usage: node verify.mjs public/rounds/1/records.json
 //   1. each payment authorization is signed by the buyer (EIP-712, GatewayWalletBatched domain on Arc)
 //   2. each record's leaf proves into the Merkle root stored on Arc in DeliveryLedger
-//   3. Circle's Gateway API maps each authorization nonce to a completed batch settlement tx on Arc
-//   4. in each settlement tx, the buyer's Gateway balance fell by exactly the sum of its authorizations in that tx
-//   5. counts: delivered/not delivered and every stage, recomputed from the records
+//   3. Circle's Gateway API says which authorizations were charged (a transfer exists) and in which batch tx they settled
+//   4. in each settlement tx, the buyer's Gateway balance fell by exactly the sum of its charged authorizations in that tx
+//   5. verdicts (method v1): delivered / charged but not delivered / not charged, recomputed from the records
+// Writes the verdicts next to the round file (verdicts.json) for the results page.
 import fs from 'node:fs';
 import { createPublicClient, http, verifyTypedData, parseAbi, getAddress } from 'viem';
-import { leafOf, verifyProof } from './lib/merkle.mjs';
-import { STAGES } from './lib/judge.mjs';
+import { leafFor, verifyProof } from './lib/merkle.mjs';
+import { STAGES, verdict, CHARGED_OUTCOMES } from './lib/judge.mjs';
 
 const file = process.argv[2] ?? 'public/rounds/1/records.json';
 const ARC_RPC = process.env.ARC_RPC || 'https://rpc.mainnet.arc.io';
@@ -39,20 +40,22 @@ check('payment authorizations signed by the buyer', sigOk === paid.length, `${si
 const onchain = await arc.readContract({ address: round.ledger, abi: ledgerAbi, functionName: 'roundOf', args: [BigInt(round.round)] });
 check('Merkle root matches DeliveryLedger on Arc', onchain.root.toLowerCase() === round.root.toLowerCase() && onchain.purchases === paid.length,
   `ledger ${round.ledger} round ${round.round}`);
-const proofOk = paid.filter((r) => leafOf(r) === r.leaf && verifyProof(r.leaf, r.proof, onchain.root)).length;
+const proofOk = paid.filter((r) => leafFor(r) === r.leaf && verifyProof(r.leaf, r.proof, onchain.root)).length;
 check('every record proves into the on-chain root', proofOk === paid.length, `${proofOk}/${paid.length}`);
 
 // 3
-const byTx = new Map(); let settled = 0; const pending = [];
+const byTx = new Map(); const gw = {}; const pending = [];
 for (const r of paid) {
   const q = await fetch(`${GATEWAY_API}/x402/transfers?network=eip155:5042&nonce=${r.authorization.nonce}`).then((x) => x.json()).catch(() => ({}));
   const t = (q.transfers ?? []).find((x) => x.nonce?.toLowerCase() === r.authorization.nonce.toLowerCase());
-  if (t?.txHash && ['confirmed', 'completed'].includes(t.status)) {
-    settled++;
-    byTx.set(t.txHash, (byTx.get(t.txHash) ?? 0n) + BigInt(r.authorization.value));
-  } else pending.push(`${r.index}:${t?.status ?? 'unknown'}`);
+  gw[r.index] = t ? { status: t.status, txHash: t.txHash } : null;
+  if (t?.txHash && ['confirmed', 'completed'].includes(t.status)) byTx.set(t.txHash, (byTx.get(t.txHash) ?? 0n) + BigInt(r.authorization.value));
+  else if (t) pending.push(`${r.index}:${t.status}`);
 }
-check('Circle Gateway settled every authorization on Arc', settled === paid.length, `${settled}/${paid.length} settled in ${byTx.size} batch tx${pending.length ? `; not yet: ${pending.slice(0, 5).join(', ')}` : ''}`);
+const charged = paid.filter((r) => gw[r.index]);
+const settled = charged.filter((r) => gw[r.index].txHash && ['confirmed', 'completed'].includes(gw[r.index].status));
+check('Circle Gateway record read for every authorization', Object.keys(gw).length === paid.length,
+  `charged ${charged.length} (settled ${settled.length} in ${byTx.size} batch tx${pending.length ? `, pending ${pending.length}` : ''}), not charged ${paid.length - charged.length}`);
 
 // 4
 let debitOk = 0;
@@ -64,11 +67,17 @@ for (const [tx, sum] of byTx) {
   if (ok) debitOk++;
   else console.log(`     tx ${tx}: debit ${before - after} vs authorizations ${sum}`);
 }
-check("buyer's Gateway debit equals its authorizations in each batch", byTx.size > 0 && debitOk === byTx.size, `${debitOk}/${byTx.size} batch tx`);
+check("buyer's Gateway debit equals its charged authorizations in each batch", byTx.size > 0 && debitOk === byTx.size, `${debitOk}/${byTx.size} batch tx`);
 
 // 5
-const delivered = paid.filter((r) => r.delivered).length;
-check('delivered count matches the on-chain count', delivered === onchain.delivered, `${delivered}/${paid.length} delivered`);
-const stageCounts = Object.fromEntries(STAGES.map((s) => [s, paid.reduce((m, r) => ((m[r.stages?.[s] ?? 'none'] = (m[r.stages?.[s] ?? 'none'] ?? 0) + 1), m), {})]));
+const passedOf = (r) => r.passed ?? r.delivered;
+check('checks-passed count matches the on-chain count', paid.filter(passedOf).length === onchain.delivered, `${paid.filter(passedOf).length}/${paid.length}`);
+const verdicts = paid.map((r) => ({ index: r.index, host: r.host, payTo: r.authorization.to, amount: r.authorization.value, status: r.status,
+  charged: Boolean(gw[r.index]), settlementTx: gw[r.index]?.txHash ?? null, emptyResult: Boolean(r.emptyResult), outcome: verdict({ status: r.status, passed: passedOf(r) }, Boolean(gw[r.index])) }));
+const count = verdicts.reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {});
+const del = verdicts.filter((v) => v.outcome === 'delivered').length, ch = verdicts.filter((v) => CHARGED_OUTCOMES.includes(v.outcome)).length;
+console.log(`verdicts ${JSON.stringify(count)}  delivery rate ${ch ? ((del / ch) * 100).toFixed(1) : '–'}% of charged (${del}/${ch})`);
+const stageCounts = Object.fromEntries(STAGES.map((st) => [st, paid.reduce((m, r) => ((m[r.stages?.[st] ?? 'none'] = (m[r.stages?.[st] ?? 'none'] ?? 0) + 1), m), {})]));
 console.log('stages', JSON.stringify(stageCounts));
+fs.writeFileSync(file.replace(/records\.json$/, 'verdicts.json'), JSON.stringify({ round: round.round, checkedAt: new Date().toISOString(), counts: count, verdicts }, null, 1));
 process.exit(results.every((r) => r.ok) ? 0 : 1);

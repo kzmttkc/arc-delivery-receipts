@@ -12,8 +12,8 @@ import { base, arc as arcChain } from 'viem/chains';
 import { privateKeyToAccount, nonceManager } from 'viem/accounts';
 import { BatchEvmScheme, GatewayClient } from '@circle-fin/x402-batching/client';
 import { env, funderKey, ARC, BASE, baseTransport, arcTransport, IRIS_API } from './lib/config.mjs';
-import { judge } from './lib/judge.mjs';
-import { leafOf, tree, proofOf } from './lib/merkle.mjs';
+import { checks } from './lib/judge.mjs';
+import { leafFor, tree, proofOf } from './lib/merkle.mjs';
 
 // Tests may skip the prompt only when both chains are local forks. Anything else asks a human.
 const isLocal = (u) => /^http:\/\/(127\.0\.0\.1|localhost)(:|\/)/.test(u ?? '');
@@ -29,7 +29,9 @@ fs.mkdirSync(new URL('records/', stateDir), { recursive: true });
 fs.mkdirSync(new URL('bodies/', stateDir), { recursive: true });
 const deployFile = new URL('./state/deploy.json', import.meta.url);
 
-const plan = JSON.parse(fs.readFileSync('data/plan.json', 'utf8'));
+const PLAN = process.env.PLAN ?? 'data/plan.json';
+const plan = JSON.parse(fs.readFileSync(PLAN, 'utf8'));
+const LEAF_VERSION = plan.method === 'v1' ? 1 : 0;
 const items = plan.items.slice(0, LIMIT);
 const need = items.reduce((s, p) => s + BigInt(p.amount), 0n);
 
@@ -147,7 +149,10 @@ for (let i = done; i < (SKIP_BUY ? done : items.length); i++) {
       rec.responseHash = sha256(bytes);
       const pRes = res?.headers.get('PAYMENT-RESPONSE');
       rec.settlement = pRes ? JSON.parse(Buffer.from(pRes, 'base64').toString()) : null;
-      Object.assign(rec, judge({ status: rec.status, contentType: rec.contentType, bytes, declaredMime: p.mimeType, outputSchema: p.outputSchema }));
+      rec.leafVersion = LEAF_VERSION;
+      Object.assign(rec, checks({ status: rec.status, contentType: rec.contentType, bytes, declaredMime: p.mimeType, outputSchema: p.outputSchema }));
+      rec.outcome = rec.passed ? 'passed_checks' : 'failed_checks';
+      if (LEAF_VERSION === 0) rec.delivered = rec.passed;
       fs.writeFileSync(new URL(`bodies/${String(i + 1).padStart(3, '0')}.bin`, stateDir), bytes);
     }
   } catch (e) { rec.outcome = 'not_bought'; rec.reason = String(e.message).slice(0, 200); }
@@ -161,12 +166,12 @@ for (let i = done; i < (SKIP_BUY ? done : items.length); i++) {
 const records = items.map((_, i) => JSON.parse(fs.readFileSync(recordFile(i), 'utf8')));
 if (!records.some((r) => r.authorization)) { console.log('支払った購入が 0 件なので記録はしません。'); process.exit(0); }
 const paid = records.filter((r) => r.authorization);
-const leaves = paid.map((r) => leafOf(r));
+const leaves = paid.map((r) => leafFor(r));
 const { root, layers } = tree(leaves);
 paid.forEach((r, k) => { r.leaf = leaves[k]; r.proof = proofOf(layers, k); });
 const outDir = new URL(`./public/rounds/${ROUND}/`, import.meta.url);
 fs.mkdirSync(outDir, { recursive: true });
-const summary = { round: ROUND, root, purchases: paid.length, delivered: paid.filter((r) => r.delivered).length, notBought: records.length - paid.length, ledger };
+const summary = { round: ROUND, method: plan.method ?? 'v0', root, purchases: paid.length, delivered: paid.filter((r) => r.passed ?? r.delivered).length, notBought: records.length - paid.length, ledger };
 const uri = `rounds/${ROUND}/records.json`;
 const existing = await arc.readContract({ address: ledger, abi: ledgerBuild.abi, functionName: 'rounds' });
 let anchorTx = null;
@@ -176,4 +181,4 @@ if (existing < BigInt(ROUND)) {
   console.log(`  ok 記録した ${ARC.explorer}/tx/${anchorTx}`);
 }
 fs.writeFileSync(new URL('records.json', outDir), JSON.stringify({ ...summary, anchorTx, records }, null, 1));
-console.log(`\n完了: 購入 ${summary.purchases} 件・届いた ${summary.delivered} 件・買えなかった ${summary.notBought} 件。Merkle 根 ${root}`);
+console.log(`\n完了: 支払い ${summary.purchases} 件・検査を通った応答 ${summary.delivered} 件・買わなかった ${summary.notBought} 件。Merkle 根 ${root}`);
