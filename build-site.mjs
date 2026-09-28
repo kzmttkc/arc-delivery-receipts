@@ -1,0 +1,96 @@
+// Builds the public results page and the "check before paying" JSON from published round files.
+// Seller host names stay anonymised (Host A, B, ...) until each host has had 72 hours with its own results:
+// set NAMED_HOSTS=host1,host2 to name the hosts whose notice window has passed.
+import fs from 'node:fs';
+import path from 'node:path';
+
+const OUT = 'public';
+const rounds = fs.existsSync(`${OUT}/rounds`) ? fs.readdirSync(`${OUT}/rounds`).map(Number).filter(Boolean).sort((a, b) => a - b) : [];
+if (!rounds.length) { console.error('no rounds yet'); process.exit(1); }
+const latest = rounds.at(-1);
+const round = JSON.parse(fs.readFileSync(`${OUT}/rounds/${latest}/records.json`, 'utf8'));
+const deploy = JSON.parse(fs.readFileSync('state/deploy.json', 'utf8'));
+const plan = JSON.parse(fs.readFileSync('data/plan.json', 'utf8'));
+const sel = JSON.parse(fs.readFileSync('data/selection.json', 'utf8'));
+const listings = JSON.parse(fs.readFileSync(`data/${sel.source.replace(/^data\//, '')}`, 'utf8'));
+const named = new Set((process.env.NAMED_HOSTS ?? '').split(',').filter(Boolean));
+const paid = round.records.filter((r) => r.authorization);
+const hosts = [...new Set(paid.map((r) => r.host))].sort((a, b) => paid.filter((r) => r.host === b).length - paid.filter((r) => r.host === a).length);
+const label = (h) => (named.has(h) ? h : `Host ${String.fromCharCode(65 + hosts.indexOf(h))}`);
+const pct = (a, b) => (b ? `${Math.round((a / b) * 1000) / 10}%` : '–');
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const STAGES = ['http2xx', 'nonEmpty', 'mimeMatch', 'schemaMatch'];
+
+// ---- JSON API: one file per payTo, plus an index ----
+const byPayTo = {};
+for (const r of paid) {
+  const k = r.authorization.to.toLowerCase();
+  (byPayTo[k] ??= { payTo: r.authorization.to, network: 'eip155:5042', purchases: 0, delivered: 0, outcomes: {}, lastChecked: null, evidence: [] });
+  const s = byPayTo[k];
+  s.purchases++; if (r.delivered) s.delivered++;
+  s.outcomes[r.outcome] = (s.outcomes[r.outcome] ?? 0) + 1;
+  s.lastChecked = [s.lastChecked, r.finishedAt].filter(Boolean).sort().at(-1);
+  s.evidence.push({ round: latest, index: r.index, nonce: r.authorization.nonce, leaf: r.leaf });
+}
+fs.mkdirSync(`${OUT}/api/v1/arc/sellers`, { recursive: true });
+for (const s of Object.values(byPayTo)) {
+  s.deliveryRate = s.purchases ? s.delivered / s.purchases : null;
+  s.ledger = deploy.ledger; s.roundsFile = `rounds/${latest}/records.json`;
+  fs.writeFileSync(`${OUT}/api/v1/arc/sellers/${s.payTo.toLowerCase()}.json`, JSON.stringify(s, null, 1));
+}
+fs.writeFileSync(`${OUT}/api/v1/arc/sellers/index.json`, JSON.stringify(Object.values(byPayTo).map(({ evidence, ...s }) => s), null, 1));
+
+// ---- funnel ----
+const funnel = [
+  ['Arc x402 listings payable through Circle Gateway (Circle Discovery API)', listings.arcGateway],
+  ['after the safety rules (GET/POST, ≤ $1, no state-changing endpoint, no unfilled path id)', sel.chosen],
+  ['answering a live 402 with a Gateway option on Arc', plan.purchases + plan.notBought.filter((n) => !/^no 402|no Gateway/.test(n.reason)).length],
+  ['with an input we could send without inventing values (so a failure is the seller’s, not ours)', plan.purchases],
+  ['paid in this round', paid.length],
+  ['delivered (all four stages pass)', paid.filter((r) => r.delivered).length],
+];
+
+// ---- traced example: the first delivered purchase ----
+const ex = paid.find((r) => r.delivered) ?? paid[0];
+const hostRows = hosts.map((h) => {
+  const rs = paid.filter((r) => r.host === h);
+  const st = STAGES.map((s) => `${rs.filter((r) => r.stages?.[s] === 'pass').length}/${rs.filter((r) => r.stages?.[s] !== 'n/a').length}`);
+  const out = Object.entries(rs.reduce((m, r) => ((m[r.outcome] = (m[r.outcome] ?? 0) + 1), m), {})).map(([k, v]) => `${k} ${v}`).join(', ');
+  return `<tr><td>${esc(label(h))}</td><td>${rs.length}</td><td><b>${pct(rs.filter((r) => r.delivered).length, rs.length)}</b></td>${st.map((x) => `<td>${x}</td>`).join('')}<td>${esc(out)}</td></tr>`;
+}).join('\n');
+
+const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Arc Delivery Receipts</title><meta name="description" content="Buyer-side delivery receipts for x402 purchases settled through Circle Gateway batches on Arc.">
+<style>:root{--bg:#fff;--fg:#111;--mut:#666;--line:#ddd;--acc:#0b57d0}@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#111;--fg:#eee;--mut:#aaa;--line:#333;--acc:#8ab4f8}}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,sans-serif;max-width:960px;margin:0 auto;padding:24px 16px}a{color:var(--acc)}table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left}
+code,pre{font:13px ui-monospace,monospace}pre{overflow-x:auto;border:1px solid var(--line);padding:12px}small,.mut{color:var(--mut)}ol li{margin:6px 0}.wrap{overflow-x:auto}</style></head><body>
+<h1>Arc Delivery Receipts</h1>
+<p>Circle Gateway nanopayments batch settlement, so a buyer gets no per-payment receipt on chain. This page restores one for purchases on Arc: each signed Gateway authorization is reconciled to its batch settlement and to the buyer’s balance change, and a Merkle root of what each seller returned is recorded on Arc before anything is published.</p>
+<p class="mut">Round ${latest} · ${esc(round.records[0]?.startedAt?.slice(0, 10) ?? '')} · ledger <a href="https://explorer.arc.io/address/${deploy.ledger}"><code>${deploy.ledger}</code></a> · anchor tx ${round.anchorTx ? `<a href="https://explorer.arc.io/tx/${round.anchorTx}"><code>${round.anchorTx.slice(0, 18)}…</code></a>` : '–'}</p>
+<h2>From listing to delivery</h2><div class="wrap"><table>${funnel.map(([k, v]) => `<tr><td>${esc(k)}</td><td><b>${v}</b></td></tr>`).join('')}</table></div>
+<h2>By seller</h2><p class="mut">n is the number of paid purchases. Stage columns show passed/applicable. Host names are shown after each host has had 72 hours with its own results.</p>
+<div class="wrap"><table><tr><th>Seller</th><th>n</th><th>Delivered</th><th>HTTP 2xx</th><th>Non-empty</th><th>Declared type</th><th>Declared schema</th><th>Outcomes</th></tr>${hostRows}</table></div>
+<h2>Follow one purchase end to end</h2><ol>
+<li>Signed authorization (EIP-712, <code>GatewayWalletBatched</code> on Arc): nonce <code>${esc(ex.authorization.nonce)}</code>, ${Number(ex.authorization.value) / 1e6} USDC to <code>${esc(ex.authorization.to)}</code>.</li>
+<li>Circle Gateway maps the nonce to its batch: <a href="https://gateway-api.circle.com/v1/x402/transfers?network=eip155:5042&amp;nonce=${ex.authorization.nonce}">Gateway API</a>.</li>
+<li>In that batch tx, the buyer’s Gateway balance fell by exactly the sum of its authorizations (checked by <code>verify.mjs</code> from Arc RPC).</li>
+<li>What came back: HTTP ${ex.status}, ${ex.responseBytes} bytes, <code>${esc(ex.contentType ?? '')}</code>, sha256 <code>${esc(ex.responseHash)}</code>.</li>
+<li>That record is leaf <code>${esc(ex.leaf)}</code>; its Merkle proof leads to the root stored in DeliveryLedger round ${latest}.</li></ol>
+<h2>Check a seller before paying</h2><pre>// GET ${'{'}site${'}'}/api/v1/arc/sellers/&lt;payTo&gt;.json  →  { deliveryRate, purchases, lastChecked, evidence[] }
+client.onBeforePaymentCreation(async (ctx) =&gt; {
+  const payTo = ctx.selectedRequirements.payTo.toLowerCase();
+  const r = await fetch(\`\${SITE}/api/v1/arc/sellers/\${payTo}.json\`);
+  if (!r.ok) return;                                  // never checked: your call
+  const s = await r.json();
+  if (s.purchases &gt;= 3 &amp;&amp; s.deliveryRate &lt; 0.8) {
+    return { abort: true, reason: \`delivery rate \${s.deliveryRate} over \${s.purchases} paid calls\` };
+  }
+});</pre>
+<p class="mut">The same per-seller history is the kind of data an agent-transaction insurer would need to price a policy.</p>
+<h2>Verify it yourself</h2><pre>git clone &lt;this repo&gt; &amp;&amp; cd arc-delivery-receipts &amp;&amp; npm ci
+node verify.mjs public/rounds/${latest}/records.json</pre>
+<p>What it proves and what it does not: it proves which authorizations the buyer signed, that Circle settled them in batches that debited the buyer by exactly those amounts, and which bytes each seller returned, fixed on Arc before publication. Seller-side credits are netted with other buyers in the same batch, so they can be checked only in aggregate. A “delivered” result says the response passed four published checks, not that its content was useful.</p>
+<p class="mut">Method: <a href="METHOD.md">METHOD.md</a>. Independent of Circle; not endorsed by Circle or Arc.</p>
+</body></html>`;
+fs.writeFileSync(`${OUT}/index.html`, html);
+console.log(`site built: round ${latest}, ${paid.length} paid, ${Object.keys(byPayTo).length} payTo files`);
