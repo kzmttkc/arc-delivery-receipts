@@ -4,14 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test 'test/*.test.mjs'",
+    "compile": "node compile.cjs",
+    "discover": "node discover.mjs && node select.mjs && node probe.mjs && node plan.mjs",
+    "run": "node run.mjs",
+    "verify": "node verify.mjs"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "@circle-fin/x402-batching": "^3.5.0",
     "viem": "^2.56.9"
-  }
+  },
+  "devDependencies": {
+    "hardhat": "^2.29.1",
+    "solc": "^0.8.28"
+  },
+  "private": true
 }
