@@ -53,7 +53,7 @@ const [arcUsdc, gw, baseUsdc, baseEth] = await Promise.all([
 ]);
 const deployed = fs.existsSync(deployFile) ? JSON.parse(fs.readFileSync(deployFile, 'utf8')) : null;
 const remaining = items.slice(done).reduce((s, p) => s + BigInt(p.amount), 0n);
-const needBridge = gw.gateway.available < remaining && arcUsdc < remaining + parseUnits('0.5', 6);
+const needBridge = gw.gateway.available + arcUsdc < remaining + parseUnits('0.5', 6); // bridge only if wallet + Gateway can't cover the round
 const needDeposit = gw.gateway.available < remaining;
 const depositAmount = remaining - gw.gateway.available + parseUnits('0.2', 6);
 const fee = needBridge ? (await (await fetch(`${IRIS_API}/v2/burn/USDC/fees/${BASE.cctpDomain}/${ARC.cctpDomain}?forward=true`)).json()).find((f) => f.finalityThreshold === 1000) : null;
