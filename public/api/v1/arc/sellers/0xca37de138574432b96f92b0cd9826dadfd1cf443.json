@@ -2,57 +2,58 @@
  "payTo": "0xcA37dE138574432B96F92B0Cd9826DaDFd1cf443",
  "network": "eip155:5042",
  "purchases": 7,
- "charged": 0,
- "delivered": 0,
+ "charged": 7,
+ "delivered": 6,
  "outcomes": {
-  "payment_not_accepted": 7
+  "delivered": 6,
+  "charged_then_rejected": 1
  },
- "lastChecked": "2026-09-28T05:27:46.734Z",
+ "lastChecked": "2026-10-01T06:05:47.457Z",
  "evidence": [
   {
-   "round": 3,
-   "index": 88,
-   "nonce": "0xbbe4e1d05dd27d01ec05fac268e0ad5b5740381e981e472c007c871ee0e95ed9",
-   "leaf": "0xd9d347c9a48e9e0b716da991b0aea53a3b153d902a9d2c3a3ee12c909b9e8dbe"
+   "round": 4,
+   "index": 36,
+   "nonce": "0x8ad8101f16bb098217006b797a2cd8c38943b2e16f4263393a9d5634ff693304",
+   "leaf": "0x4a37465d5c65e4c0d1b72a1aa20f692a24dd6b2343c69850d212c20a2b374083"
   },
   {
-   "round": 3,
-   "index": 89,
-   "nonce": "0x23982b42c340b6631d41fe21b0b5b881e0d3c8d6e5fc43c91cc5bd51de0cf3a4",
-   "leaf": "0xc21b01d198c10f990d20119a648dbc44d984aa1462a292b58e55327d0c355c0b"
+   "round": 4,
+   "index": 37,
+   "nonce": "0x0f83fa43ead3733f956be21223c43a58ad6df1275c092bad6e4e9fe9d31c90bd",
+   "leaf": "0x64d36f5c3eb53b9677164543316841be56998e54d878baf54b04084cc33f386a"
   },
   {
-   "round": 3,
-   "index": 90,
-   "nonce": "0x9333babd5bdb58534c8643ad1e5061fc08fd7a45466a2323cf7642289005b450",
-   "leaf": "0x1ee4b8d8536bb05cce34f98067db4e66dde36c32570edfdb7737baf30da16d0c"
+   "round": 4,
+   "index": 38,
+   "nonce": "0x28ce5d592cd148822f3264c0799fff8e70e5699bf5005070d9b2144c97df853f",
+   "leaf": "0x7f965df046901208ee667a4d79dd42c7525339f8a35da8ecc98028968dcb9d6b"
   },
   {
-   "round": 3,
-   "index": 91,
-   "nonce": "0x812b4be77a1608e6f283c6763e370edd906c18df02911f9b7a90e74e6f5c7dd1",
-   "leaf": "0x44951aa0bc39fdd6ea1650e65ccaa6a3a1ffb651bd9aa64593d775383600ee47"
+   "round": 4,
+   "index": 39,
+   "nonce": "0x2d701fa135391457c14382e679489ea17eb9d9840920d49ebffc928752d86fa0",
+   "leaf": "0x101e9f6d04299e3e5597975f774f4fa6778d9c5bbd2976bcd6ba98f222d059a8"
   },
   {
-   "round": 3,
-   "index": 92,
-   "nonce": "0x1f74751836f7481fd25d1eedacd3b5dd3d964ff5eb1e5433a2bbc024c38b1d3a",
-   "leaf": "0xf658a369baeac1d7293a1b83fb7b07f100c2b49d946c7e1b28517029a36cfe02"
+   "round": 4,
+   "index": 40,
+   "nonce": "0xf703d12822331fb150e345ccc2d5aaac58a4e6f34096ade6550432061177fadc",
+   "leaf": "0xe4fe2b916d561282c942eebab85931e03896937dc12d0b832837fa5e8eb4251d"
   },
   {
-   "round": 3,
-   "index": 93,
-   "nonce": "0xe87a444c631ef20827f9025b11b2ee4d93253186b995245df30fc1124b68a473",
-   "leaf": "0x0c4b5640d4e08ff34fbb92120a17ef8f30c028253bc556f00f87587cb1cceccf"
+   "round": 4,
+   "index": 41,
+   "nonce": "0xe6ab3d2fcdb2e2936b46bbf605d4883047a97bfce3d08c351831b65418e16481",
+   "leaf": "0x6dc9a2b881ba3c9d0d080240cbdbcceba50d7ae103b1db91bd60191bd717c96f"
   },
   {
-   "round": 3,
-   "index": 94,
-   "nonce": "0x8c0e77f2f5a574a3fe4d734d903915150628c21686eb15a71f5cf1974274d3c0",
-   "leaf": "0x2abcfc98f884f60732d2bf1bd7297aac9ecdda82e19ce3c5ec8c783d802058c9"
+   "round": 4,
+   "index": 42,
+   "nonce": "0x3a177a967c7fdd7727f2ed05f3694ccd3aa004b1d56b71982455c5a39cc5e868",
+   "leaf": "0x0add6787ed5aeb28f001983b5439317d70725e92ca6a7d248d5e4cf47c1669d1"
   }
  ],
- "deliveryRate": null,
+ "deliveryRate": 0.8571428571428571,
  "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
- "roundsFile": "rounds/3/records.json"
+ "roundsFile": "rounds/4/records.json"
 }

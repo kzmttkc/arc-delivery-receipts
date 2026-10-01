@@ -8,21 +8,22 @@ code,pre{font:13px ui-monospace,monospace}pre{overflow-x:auto;border:1px solid v
 <p class="mut">Round 3 · 2026-09-28 · ledger <a href="https://explorer.arc.io/address/0x7238b5ccaadf3bce753152a6cfc298431e0a83c8"><code>0x7238b5ccaadf3bce753152a6cfc298431e0a83c8</code></a> · anchor tx <a href="https://explorer.arc.io/tx/0xbd6a647c6f1c6fbb766dacf5f2b5dc77419fbf2de10997d60385fae2b5cea574"><code>0xbd6a647c6f1c6fbb…</code></a></p>
 <h2>From listing to delivery</h2><div class="wrap"><table><tr><td>Arc x402 listings payable through Circle Gateway (Circle Discovery API)</td><td><b>482</b></td></tr><tr><td>after the safety rules (GET/POST, ≤ $1, no state-changing endpoint, no unfilled path id)</td><td><b>335</b></td></tr><tr><td>answering a live 402 with a Gateway option on Arc</td><td><b>322</b></td></tr><tr><td>with every required input either not needed or given an example by the seller itself</td><td><b>99</b></td></tr><tr><td>paid (signed authorization sent) in this round</td><td><b>84</b></td></tr><tr><td>charged by the seller (a transfer exists in Circle Gateway)</td><td><b>51</b></td></tr><tr><td>delivered (charged, and the response passed all four checks)</td><td><b>42</b></td></tr></table></div>
 <h2>By seller</h2><p class="mut">“Paid” counts signed authorizations we sent. “Charged” counts those Circle Gateway recorded as transfers. The delivery rate is over charged calls, so a seller that refuses a bad request without charging is not penalised. Host names are shown after each host has had 72 hours with its own results.</p>
-<div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of charged</th><th>Charged, not delivered</th><th>Not charged</th></tr><tr><td>Host A</td><td>33</td><td>0</td><td><b>–</b> <small>(0/0)</small></td><td>–</td><td>payment_not_accepted 33</td></tr>
-<tr><td>Host B</td><td>32</td><td>32</td><td><b>71.9%</b> <small>(23/32)</small></td><td>charged_bad_response 9</td><td>–</td></tr>
-<tr><td>Host C</td><td>11</td><td>11</td><td><b>100%</b> <small>(11/11)</small></td><td>–</td><td>–</td></tr>
-<tr><td>Host D</td><td>7</td><td>7</td><td><b>100%</b> <small>(7/7)</small></td><td>–</td><td>–</td></tr>
-<tr><td>Host E</td><td>1</td><td>1</td><td><b>100%</b> <small>(1/1)</small></td><td>–</td><td>–</td></tr></table></div>
+<div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of charged</th><th>Charged, not delivered</th><th>Not charged</th></tr><tr><td>np.orthogonal.com</td><td>33</td><td>0</td><td><b>–</b> <small>(0/0)</small></td><td>–</td><td>payment_not_accepted 33</td></tr>
+<tr><td>api.aisa.one</td><td>32</td><td>32</td><td><b>71.9%</b> <small>(23/32)</small></td><td>charged_bad_response 9</td><td>–</td></tr>
+<tr><td>edge.goldsky.com</td><td>11</td><td>11</td><td><b>100%</b> <small>(11/11)</small></td><td>–</td><td>–</td></tr>
+<tr><td>nano.blockrun.ai</td><td>7</td><td>7</td><td><b>100%</b> <small>(7/7)</small></td><td>–</td><td>–</td></tr>
+<tr><td>api.exa.ai</td><td>1</td><td>1</td><td><b>100%</b> <small>(1/1)</small></td><td>–</td><td>–</td></tr></table></div>
+<h2>Re-test after a seller's fix (round 4)</h2><p class="mut">re-test of np.orthogonal.com after the seller reported a fix (2026-09-29). Anchored in tx <a href="https://explorer.arc.io/tx/0x18d026a268a2ec3af56f4a75bd87b58eef78f036e416a230a8d29e7a51e47714"><code>0x18d026a268a2ec3a…</code></a>.</p><div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of charged</th><th>Other outcomes</th></tr><tr><td>np.orthogonal.com</td><td>47</td><td>47</td><td><b>70.2%</b> <small>(33/47)</small></td><td>charged_then_rejected 14</td></tr></table></div>
 <h2>Follow one purchase end to end</h2><ol>
 <li>Signed authorization (EIP-712, <code>GatewayWalletBatched</code> on Arc): nonce <code>0xb973c86a716d0253aef8a33f504f4c13097722ceca40e428d517994ebcb5eb5b</code>, 0.1 USDC to <code>0xBd7b9f3e0CD3E1f6e698D0eeBb99F96E093BdeE3</code>.</li>
 <li>Circle Gateway maps the nonce to its batch: <a href="https://gateway-api.circle.com/v1/x402/transfers?network=eip155:5042&amp;nonce=0xb973c86a716d0253aef8a33f504f4c13097722ceca40e428d517994ebcb5eb5b">Gateway API</a>.</li>
 <li>It settled in batch tx <a href="https://explorer.arc.io/tx/0x6ae70bf1ac146895b1d39342cbea49bb82037768e2b04dbc4109c2105ffc791c"><code>0x6ae70bf1ac146895…</code></a>; in that tx the buyer’s Gateway balance fell by exactly the sum of its charged authorizations (checked by <code>verify.mjs</code> from Arc RPC).</li>
 <li>What came back: HTTP 200, 24 bytes, <code>application/json; charset=utf-8</code>, sha256 <code>0xd4a387cd5cc32e213f66c4a9493bef39bdf8f9be0226dec60c534d68f0ee0606</code>.</li>
 <li>That record is leaf <code>0x23ce49fe5d8d2d563c8d298206ddf97dd2ea678f0a8d374eb03c7c6bffcc3d3c</code>; its Merkle proof leads to the root stored in DeliveryLedger round 3.</li></ol>
-<h2>Check a seller before paying</h2><pre>// GET {site}/api/v1/arc/sellers/&lt;payTo&gt;.json  →  { deliveryRate, purchases, lastChecked, evidence[] }
+<h2>Check a seller before paying</h2><pre>// GET https://kzmttkc.github.io/arc-delivery-receipts/api/v1/arc/sellers/&lt;payTo&gt;.json  →  { deliveryRate, purchases, lastChecked, evidence[] }
 client.onBeforePaymentCreation(async (ctx) =&gt; {
   const payTo = ctx.selectedRequirements.payTo.toLowerCase();
-  const r = await fetch(`${SITE}/api/v1/arc/sellers/${payTo}.json`);
+  const r = await fetch(`https://kzmttkc.github.io/arc-delivery-receipts/api/v1/arc/sellers/${payTo}.json`);
   if (!r.ok) return;                                  // never checked: your call
   const s = await r.json();
   if (s.purchases &gt;= 3 &amp;&amp; s.deliveryRate &lt; 0.8) {
@@ -30,8 +31,8 @@ client.onBeforePaymentCreation(async (ctx) =&gt; {
   }
 });</pre>
 <p class="mut">The same per-seller history is the kind of data an agent-transaction insurer would need to price a policy.</p>
-<h2>Verify it yourself</h2><pre>git clone &lt;this repo&gt; &amp;&amp; cd arc-delivery-receipts &amp;&amp; npm ci
+<h2>Verify it yourself</h2><pre>git clone https://github.com/kzmttkc/arc-delivery-receipts &amp;&amp; cd arc-delivery-receipts &amp;&amp; npm ci
 node verify.mjs public/rounds/3/records.json</pre>
 <p>What it proves and what it does not: it proves which authorizations the buyer signed, that Circle settled them in batches that debited the buyer by exactly those amounts, and which bytes each seller returned, fixed on Arc before publication. Seller-side credits are netted with other buyers in the same batch, so they can be checked only in aggregate. A “delivered” result says the response passed four published checks, not that its content was useful.</p>
-<p class="mut">Method: <a href="METHOD.md">METHOD.md</a>. Independent of Circle; not endorsed by Circle or Arc.</p>
+<p class="mut">Method: <a href="https://github.com/kzmttkc/arc-delivery-receipts/blob/main/METHOD.md">METHOD.md</a> · Code and records: <a href="https://github.com/kzmttkc/arc-delivery-receipts">github.com/kzmttkc/arc-delivery-receipts</a>. Independent of Circle; not endorsed by Circle or Arc.</p>
 </body></html>
