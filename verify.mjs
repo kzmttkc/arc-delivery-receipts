@@ -81,7 +81,19 @@ check('Circle Gateway record read for every authorization', Object.keys(gw).leng
 // 4
 let debitOk = 0;
 for (const [tx, sum] of byTx) {
-  const rc = await arc.getTransactionReceipt({ hash: tx });
+  // Some rpc.mainnet.arc.io backends return null for older receipts (seen 2026-10-06); fall back to the block's receipts.
+  const rc = await arc.getTransactionReceipt({ hash: tx }).then((x) => {
+    if (x.status !== 'success') throw new Error(`settlement ${tx} reverted`);
+    return x;
+  }, async () => {
+    const t = await arc.getTransaction({ hash: tx });
+    if (t.blockNumber == null) throw new Error(`settlement ${tx} pending`);
+    const all = await arc.request({ method: 'eth_getBlockReceipts', params: [`0x${t.blockNumber.toString(16)}`] });
+    const r = all.find((x) => x.transactionHash.toLowerCase() === tx.toLowerCase());
+    if (!r || r.status !== '0x1') throw new Error(`settlement ${tx} not found or failed in block ${t.blockNumber}`);
+    return { blockNumber: t.blockNumber, to: t.to };
+  });
+  if (getAddress(rc.to) !== getAddress(paid[0].verifyingContract)) throw new Error(`settlement ${tx} was not sent to the GatewayWallet the buyer signed for`);
   const [before, after] = await Promise.all([rc.blockNumber - 1n, rc.blockNumber].map((b) =>
     arc.readContract({ address: rc.to, abi: gwAbi, functionName: 'totalBalance', args: [USDC, buyer], blockNumber: b })));
   const ok = before - after === sum;
