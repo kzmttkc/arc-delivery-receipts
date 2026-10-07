@@ -3,7 +3,7 @@
 Circle Gateway nanopayments settle x402 payments in batches, so a buyer gets no per-payment receipt on chain.
 This repository buys from Arc x402 sellers through Gateway and restores that receipt:
 
-- each signed Gateway authorization is matched to its batch settlement and to the buyer's balance change on Arc
+- each signed Gateway authorization is checked against Circle Gateway's record: its batch settlement and the buyer's balance change on Arc or, for a seller that declares a prepaid balance (see METHOD.md), settled top-ups that cover the call
 - a Merkle root of what every seller returned is written to `DeliveryLedger` on Arc before results are published
 - a per-seller delivery rate can be looked up before paying
 
