@@ -4,9 +4,14 @@
  "purchases": 32,
  "charged": 32,
  "delivered": 23,
+ "couldNotTell": 9,
+ "couldNotTellResponses": {
+  "HTTP 200 with 0 bytes": 9
+ },
+ "judged": 23,
  "outcomes": {
   "delivered": 23,
-  "charged_bad_response": 9
+  "could_not_tell_sent_no_input": 9
  },
  "lastChecked": "2026-09-28T05:26:17.454Z",
  "evidence": [
@@ -203,7 +208,7 @@
    "leaf": "0xcb6d81137e09d854d5a6e2823011b988db57da6ab1c5fb3a7229a3581d2e031e"
   }
  ],
- "deliveryRate": 0.71875,
+ "deliveryRate": 1,
  "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
  "roundsFile": "rounds/3/records.json"
 }

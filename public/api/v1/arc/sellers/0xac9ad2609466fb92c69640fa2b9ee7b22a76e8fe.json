@@ -4,8 +4,13 @@
  "purchases": 1,
  "charged": 1,
  "delivered": 0,
+ "couldNotTell": 1,
+ "couldNotTellResponses": {
+  "HTTP 422": 1
+ },
+ "judged": 0,
  "outcomes": {
-  "charged_then_rejected": 1
+  "could_not_tell_sent_no_input": 1
  },
  "lastChecked": "2026-10-01T06:05:57.356Z",
  "evidence": [
@@ -16,7 +21,7 @@
    "leaf": "0x18be470f75671f22d917d7986dbbaef92d0693a0b5d2c8d8921aac3eb8d63995"
   }
  ],
- "deliveryRate": 0,
+ "deliveryRate": null,
  "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
  "roundsFile": "rounds/4/records.json"
 }

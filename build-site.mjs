@@ -24,6 +24,15 @@ const label = (h) => (named.has(h) ? h : `Host ${String.fromCharCode(65 + hosts.
 const pct = (a, b) => (b ? `${Math.round((a / b) * 1000) / 10}%` : '–');
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const STAGES = ['http2xx', 'nonEmpty', 'mimeMatch', 'schemaMatch'];
+// A GET is sent with no input (requestKind "empty") when the seller's live 402 gives no request values to send and its
+// listing marks no input as required. When the seller charges such a call and the response fails a check, the failure
+// cannot be told apart from a seller that needs an input we did not send. It is reported as "could not tell", with its
+// HTTP status, and left out of the rate. A call sent with no input that delivered is proof of delivery and stays in.
+// Only a 2xx or 4xx answer is treated this way. A 5xx or no answer stays in the rate.
+const cannotTell = (r, v) => Boolean(v.charged) && v.outcome !== 'delivered' && r.requestKind === 'empty' && ((r.status >= 200 && r.status < 300) || (r.status >= 400 && r.status < 500));
+const CT = 'could_not_tell_sent_no_input';
+const how = (r) => `HTTP ${r.status}${r.status >= 200 && r.status < 300 && !r.responseBytes ? ' with 0 bytes' : ''}`;
+const tally = (rs) => Object.entries(rs.reduce((m, r) => ((m[how(r)] = (m[how(r)] ?? 0) + 1), m), {})).map(([k, n]) => `${k}: ${n}`).join(', ');
 
 // ---- JSON API: one file per payTo, plus an index ----
 const byPayTo = {};
@@ -34,16 +43,18 @@ const apiRows = [...paid.filter((r) => !retestHosts.has(r.host)).map((r) => [r, 
     return RR.records.filter((r) => r.authorization).map((r) => [r, VV[r.index], rn]); })];
 for (const [r, v, rn] of apiRows) {
   const k = r.authorization.to.toLowerCase();
-  (byPayTo[k] ??= { payTo: r.authorization.to, network: 'eip155:5042', purchases: 0, charged: 0, delivered: 0, outcomes: {}, lastChecked: null, evidence: [] });
+  (byPayTo[k] ??= { payTo: r.authorization.to, network: 'eip155:5042', purchases: 0, charged: 0, delivered: 0, couldNotTell: 0, couldNotTellResponses: {}, judged: 0, outcomes: {}, lastChecked: null, evidence: [] });
   const s = byPayTo[k];
-  s.purchases++; if (v.charged) s.charged++; if (v.outcome === 'delivered') s.delivered++;
-  s.outcomes[v.outcome] = (s.outcomes[v.outcome] ?? 0) + 1;
+  const ct = cannotTell(r, v), o = ct ? CT : v.outcome;
+  s.purchases++; if (v.charged) s.charged++; if (v.outcome === 'delivered') s.delivered++; if (ct) { s.couldNotTell++; s.couldNotTellResponses[how(r)] = (s.couldNotTellResponses[how(r)] ?? 0) + 1; }
+  s.outcomes[o] = (s.outcomes[o] ?? 0) + 1;
   s.lastChecked = [s.lastChecked, r.finishedAt].filter(Boolean).sort().at(-1);
   s.evidence.push({ round: rn, index: r.index, nonce: r.authorization.nonce, leaf: r.leaf });
 }
 fs.mkdirSync(`${OUT}/api/v1/arc/sellers`, { recursive: true });
 for (const s of Object.values(byPayTo)) {
-  s.deliveryRate = s.charged ? s.delivered / s.charged : null; // delivered out of the calls the seller actually charged
+  s.judged = s.charged - s.couldNotTell; // every charged call except those sent with no input that then failed a check
+  s.deliveryRate = s.judged ? s.delivered / s.judged : null; // null when no charged call could be judged
   s.ledger = deploy.ledger; s.roundsFile = `rounds/${s.evidence[0]?.round ?? latest}/records.json`;
   fs.writeFileSync(`${OUT}/api/v1/arc/sellers/${s.payTo.toLowerCase()}.json`, JSON.stringify(s, null, 1));
 }
@@ -59,16 +70,22 @@ const funnel = [
   ['paid (signed authorization sent) in this round', paid.length],
   ['charged by the seller (a transfer exists in Circle Gateway)', charged.length],
   ['delivered (charged, and the response passed all four checks)', V.verdicts.filter((v) => v.outcome === 'delivered').length],
+  ['could not tell (charged and failed a check, on a call sent with no input)', paid.filter((r) => cannotTell(r, vOf[r.index])).length],
 ];
 
 // ---- traced example: the first delivered purchase ----
 const ex = paid.find((r) => vOf[r.index].outcome === 'delivered' && vOf[r.index].settlementTx) ?? paid.find((r) => vOf[r.index].outcome === 'delivered') ?? paid[0];
+const rOf = Object.fromEntries(round.records.map((r) => [r.index, r]));
+const retestHostsOf = Object.fromEntries(retests.map((rn) => [rn, new Set(JSON.parse(fs.readFileSync(`${OUT}/rounds/${rn}/records.json`, 'utf8')).records.map((r) => r.host))]));
 const hostRows = hosts.map((h) => {
   const vs = V.verdicts.filter((v) => v.host === h);
   const ch = vs.filter((v) => v.charged), del = vs.filter((v) => v.outcome === 'delivered');
-  const notCh = Object.entries(vs.filter((v) => !v.charged).reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {})).map(([k, n]) => `${k} ${n}`).join(', ') || '–';
-  const bad = Object.entries(ch.filter((v) => v.outcome !== 'delivered').reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {})).map(([k, n]) => `${k} ${n}`).join(', ') || '–';
-  return `<tr><td>${esc(label(h))}</td><td>${vs.length}</td><td>${ch.length}</td><td><b>${pct(del.length, ch.length)}</b> <small>(${del.length}/${ch.length})</small></td><td>${esc(bad)}</td><td>${esc(notCh)}</td></tr>`;
+  const ct = ch.filter((v) => cannotTell(rOf[v.index], v)), judged = ch.length - ct.length;
+  const again = retests.filter((rn) => retestHostsOf[rn].has(h));
+  const notCh = (Object.entries(vs.filter((v) => !v.charged).reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {})).map(([k, n]) => `${k} ${n}`).join(', ') || '–')
+    + (again.length ? `. Re-tested in round ${again.join(', ')}, below` : '');
+  const bad = Object.entries(ch.filter((v) => v.outcome !== 'delivered' && !cannotTell(rOf[v.index], v)).reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {})).map(([k, n]) => `${k} ${n}`).join(', ') || '–';
+  return `<tr><td>${esc(label(h))}</td><td>${vs.length}</td><td>${ch.length}</td><td><b>${pct(del.length, judged)}</b> <small>(${del.length}/${judged})</small>${ct.length ? `<br><small>${del.length}/${ch.length} of all charged calls</small>` : ''}</td><td>${esc(bad)}</td><td>${ct.length ? `${ct.length} <small>(${esc(tally(ct.map((v) => rOf[v.index])))})</small>` : '–'}</td><td>${esc(notCh)}</td></tr>`;
 }).join('\n');
 
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -80,16 +97,18 @@ code,pre{font:13px ui-monospace,monospace}pre{overflow-x:auto;border:1px solid v
 <p>Circle Gateway nanopayments batch settlement, so a buyer gets no per-payment receipt on chain. This page restores one for purchases on Arc: each signed Gateway authorization is checked against Circle Gateway’s record: a batch settlement and the buyer’s balance change or, for a seller that declares a prepaid balance, settled top-ups that cover the call. A Merkle root of what each seller returned is recorded on Arc before anything is published.</p>
 <p class="mut">Round ${latest} · ${esc(round.records[0]?.startedAt?.slice(0, 10) ?? '')} · ledger <a href="https://explorer.arc.io/address/${deploy.ledger}"><code>${deploy.ledger}</code></a> · anchor tx ${round.anchorTx ? `<a href="https://explorer.arc.io/tx/${round.anchorTx}"><code>${round.anchorTx.slice(0, 18)}…</code></a>` : '–'}</p>
 <h2>From listing to delivery</h2><div class="wrap"><table>${funnel.map(([k, v]) => `<tr><td>${esc(k)}</td><td><b>${v}</b></td></tr>`).join('')}</table></div>
-<h2>By seller</h2><p class="mut">“Paid” counts signed authorizations we sent. “Charged” counts those Circle Gateway recorded as transfers. The delivery rate is over charged calls, so a seller that refuses a bad request without charging is not penalised. Host names are shown after each host has had 72 hours with its own results.</p>
-<div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of charged</th><th>Charged, not delivered</th><th>Not charged</th></tr>${hostRows}</table></div>
+<h2>By seller</h2><p class="mut">“Paid” counts signed authorizations we sent. “Charged” counts those Circle Gateway recorded as transfers. A seller that refuses a bad request without charging is not penalised. “Could not tell” counts calls the seller charged that then failed a check, where we had sent no input. We send a GET with no input when the seller’s live 402 gives no request values to send and its listing marks no input as required. A buyer who sends the right input may get a different result, so these calls are shown with the HTTP status the seller returned and left out of the rate. A 5xx or no answer stays in the rate. The delivery rate is over every other charged call (“judged”). Calls sent with no input that delivered are still counted, so read the rate together with the “Could not tell” column. <code>payment_not_accepted</code> means the seller answered 402 again to a signed payment and charged nothing. Host names are shown after each host has had 72 hours with its own results.</p>
+<div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of judged</th><th>Charged, not delivered</th><th>Could not tell</th><th>Not charged</th></tr>${hostRows}</table></div>
 ${retests.map((rn) => {
   const V2 = JSON.parse(fs.readFileSync(`${OUT}/rounds/${rn}/verdicts.json`, 'utf8'));
   const R2 = JSON.parse(fs.readFileSync(`${OUT}/rounds/${rn}/records.json`, 'utf8'));
   const hs = [...new Set(V2.verdicts.map((v) => v.host))];
+  const r2 = Object.fromEntries(R2.records.map((r) => [r.index, r]));
   const rows = hs.map((h) => { const vs = V2.verdicts.filter((v) => v.host === h); const ch = vs.filter((v) => v.charged); const del = vs.filter((v) => v.outcome === 'delivered');
-    const other = Object.entries(vs.filter((v) => v.outcome !== 'delivered').reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {})).map(([k, n]) => `${k} ${n}`).join(', ') || '–';
-    return `<tr><td>${esc(label(h))}</td><td>${vs.length}</td><td>${ch.length}</td><td><b>${pct(del.length, ch.length)}</b> <small>(${del.length}/${ch.length})</small></td><td>${esc(other)}</td></tr>`; }).join('');
-  return `<h2>Re-test after a seller's fix (round ${rn})</h2><p class="mut">${esc(JSON.parse(fs.readFileSync(process.env['PLAN_' + rn] ?? `data/plan-${rn}.json`, 'utf8')).note ?? '')}. Anchored in tx ${R2.anchorTx ? `<a href="https://explorer.arc.io/tx/${R2.anchorTx}"><code>${R2.anchorTx.slice(0, 18)}…</code></a>` : '–'}.</p><div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of charged</th><th>Other outcomes</th></tr>${rows}</table></div>`;
+    const ct = ch.filter((v) => cannotTell(r2[v.index], v)), judged = ch.length - ct.length;
+    const other = Object.entries(vs.filter((v) => v.outcome !== 'delivered' && !cannotTell(r2[v.index], v)).reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {})).map(([k, n]) => `${k} ${n}`).join(', ') || '–';
+    return `<tr><td>${esc(label(h))}</td><td>${vs.length}</td><td>${ch.length}</td><td><b>${pct(del.length, judged)}</b> <small>(${del.length}/${judged})</small>${ct.length ? `<br><small>${del.length}/${ch.length} of all charged calls</small>` : ''}</td><td>${ct.length ? `${ct.length} <small>(${esc(tally(ct.map((v) => r2[v.index])))})</small>` : '–'}</td><td>${esc(other)}</td></tr>`; }).join('');
+  return `<h2>Re-test after a seller's fix (round ${rn})</h2><p class="mut">${esc(JSON.parse(fs.readFileSync(process.env['PLAN_' + rn] ?? `data/plan-${rn}.json`, 'utf8')).note ?? '')}. Anchored in tx ${R2.anchorTx ? `<a href="https://explorer.arc.io/tx/${R2.anchorTx}"><code>${R2.anchorTx.slice(0, 18)}…</code></a>` : '–'}.</p><div class="wrap"><table><tr><th>Seller</th><th>Paid</th><th>Charged</th><th>Delivered of judged</th><th>Could not tell</th><th>Other outcomes</th></tr>${rows}</table></div>`;
 }).join('\n')}
 <h2>Follow one purchase end to end</h2><ol>
 <li>Signed authorization (EIP-712, <code>GatewayWalletBatched</code> on Arc): nonce <code>${esc(ex.authorization.nonce)}</code>, ${Number(ex.authorization.value) / 1e6} USDC to <code>${esc(ex.authorization.to)}</code>.</li>
@@ -97,14 +116,17 @@ ${retests.map((rn) => {
 <li>It settled in batch tx ${vOf[ex.index].settlementTx ? `<a href="https://explorer.arc.io/tx/${vOf[ex.index].settlementTx}"><code>${vOf[ex.index].settlementTx.slice(0, 18)}…</code></a>` : '(pending)'}; in that tx the buyer’s Gateway balance fell by exactly the sum of its charged authorizations (checked by <code>verify.mjs</code> from Arc RPC).</li>
 <li>What came back: HTTP ${ex.status}, ${ex.responseBytes} bytes, <code>${esc(ex.contentType ?? '')}</code>, sha256 <code>${esc(ex.responseHash)}</code>.</li>
 <li>That record is leaf <code>${esc(ex.leaf)}</code>; its Merkle proof leads to the root stored in DeliveryLedger round ${latest}.</li></ol>
-<h2>Check a seller before paying</h2><pre>// GET https://kzmttkc.github.io/arc-delivery-receipts/api/v1/arc/sellers/&lt;payTo&gt;.json  →  { deliveryRate, purchases, lastChecked, evidence[] }
+<h2>Check a seller before paying</h2><pre>// GET https://kzmttkc.github.io/arc-delivery-receipts/api/v1/arc/sellers/&lt;payTo&gt;.json  →  { deliveryRate, judged, couldNotTell, couldNotTellResponses, charged, purchases, lastChecked, evidence[] }
 client.onBeforePaymentCreation(async (ctx) =&gt; {
   const payTo = ctx.selectedRequirements.payTo.toLowerCase();
   const r = await fetch(\`https://kzmttkc.github.io/arc-delivery-receipts/api/v1/arc/sellers/\${payTo}.json\`);
   if (!r.ok) return;                                  // never checked: your call
   const s = await r.json();
-  if (s.purchases &gt;= 3 &amp;&amp; s.deliveryRate &lt; 0.8) {
-    return { abort: true, reason: \`delivery rate \${s.deliveryRate} over \${s.purchases} paid calls\` };
+  if (s.couldNotTell &gt; 0) console.warn(\`\${payTo} charged \${s.couldNotTell} calls sent with no input and returned no usable result. Its listing may not say which input it needs, so read the seller's own docs.\`, s.couldNotTellResponses);
+  if (s.couldNotTell &gt;= 3 &amp;&amp; s.delivered === 0) console.warn(\`\${payTo} charged \${s.couldNotTell} calls and delivered none. Do not call it without the input its docs require.\`);
+  if (s.judged &lt; 3 || s.deliveryRate === null) return; // no or too few judged calls: the rate says nothing either way, your call
+  if (s.deliveryRate &lt; 0.8) {
+    return { abort: true, reason: \`delivery rate \${s.deliveryRate} over \${s.judged} judged calls\` };
   }
 });</pre>
 <p class="mut">The same per-seller history is the kind of data an agent-transaction insurer would need to price a policy.</p>

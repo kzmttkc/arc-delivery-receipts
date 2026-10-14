@@ -109,7 +109,7 @@ const verdicts = paid.map((r) => ({ index: r.index, host: r.host, payTo: r.autho
   charged: Boolean(gw[r.index] || prepaid[r.index]), paidFrom: gw[r.index] ? 'settlement' : prepaid[r.index] ? 'prepaid_balance' : null, settlementTx: gw[r.index]?.txHash ?? null, emptyResult: Boolean(r.emptyResult), validBefore: Number(r.authorization.validBefore), outcome: verdict({ status: r.status, passed: passedOf(r), validBefore: r.authorization.validBefore }, Boolean(gw[r.index] || prepaid[r.index])) }));
 const count = verdicts.reduce((m, v) => ((m[v.outcome] = (m[v.outcome] ?? 0) + 1), m), {});
 const del = verdicts.filter((v) => v.outcome === 'delivered').length, ch = verdicts.filter((v) => CHARGED_OUTCOMES.includes(v.outcome)).length;
-console.log(`verdicts ${JSON.stringify(count)}  delivery rate ${ch ? ((del / ch) * 100).toFixed(1) : '–'}% of charged (${del}/${ch})`);
+console.log(`verdicts ${JSON.stringify(count)}  delivery rate ${ch ? ((del / ch) * 100).toFixed(1) : '–'}% of charged (${del}/${ch}) (all charged calls; see METHOD.md "Calls that could not be judged")`);
 const stageCounts = Object.fromEntries(STAGES.map((st) => [st, paid.reduce((m, r) => ((m[r.stages?.[st] ?? 'none'] = (m[r.stages?.[st] ?? 'none'] ?? 0) + 1), m), {})]));
 console.log('stages', JSON.stringify(stageCounts));
 fs.writeFileSync(file.replace(/records\.json$/, 'verdicts.json'), JSON.stringify({ round: round.round, checkedAt: new Date().toISOString(), counts: count, verdicts }, null, 1));

@@ -5,12 +5,17 @@
   "purchases": 32,
   "charged": 32,
   "delivered": 23,
+  "couldNotTell": 9,
+  "couldNotTellResponses": {
+   "HTTP 200 with 0 bytes": 9
+  },
+  "judged": 23,
   "outcomes": {
    "delivered": 23,
-   "charged_bad_response": 9
+   "could_not_tell_sent_no_input": 9
   },
   "lastChecked": "2026-09-28T05:26:17.454Z",
-  "deliveryRate": 0.71875,
+  "deliveryRate": 1,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/3/records.json"
  },
@@ -20,6 +25,9 @@
   "purchases": 1,
   "charged": 1,
   "delivered": 1,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 1,
   "outcomes": {
    "delivered": 1
   },
@@ -34,6 +42,9 @@
   "purchases": 11,
   "charged": 11,
   "delivered": 11,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 11,
   "outcomes": {
    "delivered": 11
   },
@@ -48,6 +59,9 @@
   "purchases": 7,
   "charged": 7,
   "delivered": 7,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 7,
   "outcomes": {
    "delivered": 7
   },
@@ -62,6 +76,9 @@
   "purchases": 1,
   "charged": 1,
   "delivered": 1,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 1,
   "outcomes": {
    "delivered": 1
   },
@@ -76,11 +93,16 @@
   "purchases": 3,
   "charged": 3,
   "delivered": 0,
+  "couldNotTell": 3,
+  "couldNotTellResponses": {
+   "HTTP 404": 3
+  },
+  "judged": 0,
   "outcomes": {
-   "charged_then_rejected": 3
+   "could_not_tell_sent_no_input": 3
   },
   "lastChecked": "2026-10-01T06:03:18.095Z",
-  "deliveryRate": 0,
+  "deliveryRate": null,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  },
@@ -90,12 +112,17 @@
   "purchases": 11,
   "charged": 11,
   "delivered": 9,
+  "couldNotTell": 2,
+  "couldNotTellResponses": {
+   "HTTP 400": 2
+  },
+  "judged": 9,
   "outcomes": {
    "delivered": 9,
-   "charged_then_rejected": 2
+   "could_not_tell_sent_no_input": 2
   },
   "lastChecked": "2026-10-01T06:04:24.030Z",
-  "deliveryRate": 0.8181818181818182,
+  "deliveryRate": 1,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  },
@@ -105,11 +132,16 @@
   "purchases": 1,
   "charged": 1,
   "delivered": 0,
+  "couldNotTell": 1,
+  "couldNotTellResponses": {
+   "HTTP 400": 1
+  },
+  "judged": 0,
   "outcomes": {
-   "charged_then_rejected": 1
+   "could_not_tell_sent_no_input": 1
   },
   "lastChecked": "2026-10-01T06:04:26.190Z",
-  "deliveryRate": 0,
+  "deliveryRate": null,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  },
@@ -119,6 +151,9 @@
   "purchases": 1,
   "charged": 1,
   "delivered": 1,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 1,
   "outcomes": {
    "delivered": 1
   },
@@ -133,11 +168,16 @@
   "purchases": 3,
   "charged": 3,
   "delivered": 0,
+  "couldNotTell": 3,
+  "couldNotTellResponses": {
+   "HTTP 400": 3
+  },
+  "judged": 0,
   "outcomes": {
-   "charged_then_rejected": 3
+   "could_not_tell_sent_no_input": 3
   },
   "lastChecked": "2026-10-01T06:04:33.154Z",
-  "deliveryRate": 0,
+  "deliveryRate": null,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  },
@@ -147,6 +187,9 @@
   "purchases": 15,
   "charged": 15,
   "delivered": 15,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 15,
   "outcomes": {
    "delivered": 15
   },
@@ -161,12 +204,17 @@
   "purchases": 7,
   "charged": 7,
   "delivered": 6,
+  "couldNotTell": 1,
+  "couldNotTellResponses": {
+   "HTTP 404": 1
+  },
+  "judged": 6,
   "outcomes": {
    "delivered": 6,
-   "charged_then_rejected": 1
+   "could_not_tell_sent_no_input": 1
   },
   "lastChecked": "2026-10-01T06:05:47.457Z",
-  "deliveryRate": 0.8571428571428571,
+  "deliveryRate": 1,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  },
@@ -176,11 +224,16 @@
   "purchases": 3,
   "charged": 3,
   "delivered": 0,
+  "couldNotTell": 3,
+  "couldNotTellResponses": {
+   "HTTP 400": 3
+  },
+  "judged": 0,
   "outcomes": {
-   "charged_then_rejected": 3
+   "could_not_tell_sent_no_input": 3
   },
   "lastChecked": "2026-10-01T06:05:53.886Z",
-  "deliveryRate": 0,
+  "deliveryRate": null,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  },
@@ -190,6 +243,9 @@
   "purchases": 1,
   "charged": 1,
   "delivered": 1,
+  "couldNotTell": 0,
+  "couldNotTellResponses": {},
+  "judged": 1,
   "outcomes": {
    "delivered": 1
   },
@@ -204,11 +260,16 @@
   "purchases": 1,
   "charged": 1,
   "delivered": 0,
+  "couldNotTell": 1,
+  "couldNotTellResponses": {
+   "HTTP 422": 1
+  },
+  "judged": 0,
   "outcomes": {
-   "charged_then_rejected": 1
+   "could_not_tell_sent_no_input": 1
   },
   "lastChecked": "2026-10-01T06:05:57.356Z",
-  "deliveryRate": 0,
+  "deliveryRate": null,
   "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
   "roundsFile": "rounds/4/records.json"
  }

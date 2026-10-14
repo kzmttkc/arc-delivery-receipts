@@ -4,9 +4,14 @@
  "purchases": 7,
  "charged": 7,
  "delivered": 6,
+ "couldNotTell": 1,
+ "couldNotTellResponses": {
+  "HTTP 404": 1
+ },
+ "judged": 6,
  "outcomes": {
   "delivered": 6,
-  "charged_then_rejected": 1
+  "could_not_tell_sent_no_input": 1
  },
  "lastChecked": "2026-10-01T06:05:47.457Z",
  "evidence": [
@@ -53,7 +58,7 @@
    "leaf": "0x0add6787ed5aeb28f001983b5439317d70725e92ca6a7d248d5e4cf47c1669d1"
   }
  ],
- "deliveryRate": 0.8571428571428571,
+ "deliveryRate": 1,
  "ledger": "0x7238b5ccaadf3bce753152a6cfc298431e0a83c8",
  "roundsFile": "rounds/4/records.json"
 }

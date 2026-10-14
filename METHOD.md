@@ -32,7 +32,8 @@ Four checks on what came back, each counted separately (a check that does not ap
 Whether the seller charged comes from Circle, not from us: a payment counts as charged when Circle's Gateway API has a
 transfer for its nonce. Verdicts:
 - charged: `delivered` (all checks pass), `charged_bad_response`, `charged_then_rejected` (4xx), `charged_server_error`,
-  `charged_no_response`
+  `charged_no_response`. On the results page and in the lookup JSON, a `charged_bad_response` or `charged_then_rejected`
+  on a call sent with no input is shown as `could_not_tell_sent_no_input` (see "Calls that could not be judged")
 - not charged: `refused_not_charged` (4xx without charging, the correct way to refuse a bad request),
   `payment_not_accepted` (402 again), `served_awaiting_settlement` (content returned, no transfer yet, and the signed
   authorization is still valid, so the seller may still settle it), `served_not_charged` (the same after the
@@ -43,7 +44,7 @@ calls are deducted from a balance without submitting each authorization to Circl
 the seller's own documentation). A 2xx call to such a seller counts as charged (`paidFrom: prepaid_balance`) when
 Circle has settled top-ups from this buyer to the same `payTo` that cover every call so far at the published unit price.
 
-**Delivery rate = delivered / charged.** A seller that refuses a bad request without charging is not penalised.
+**Delivery rate = delivered / judged**, where judged is charged minus the calls that could not be told (see "Calls that could not be judged"). A seller that refuses a bad request without charging is not penalised.
 
 ## Receipts on Arc
 One leaf per paid purchase, committing raw facts only (v1):
@@ -60,6 +61,19 @@ its Gateway `totalBalance` must fall by exactly the sum of its authorizations in
 
 Limit: a seller's credit in a batch is netted with other buyers, so the seller side can be checked only in total,
 not per payment.
+
+## Calls that could not be judged
+A GET is sent with no input (`requestKind` `empty`) when the seller's live 402 gives no request values to send in
+`extensions.bazaar.info.input` and its listing marks no input as required. A POST is bought only when its 402 gives a body or query values to send. If the seller charges such a call and the
+response fails a check, the record cannot show whether the seller fails to deliver or needs an input that was not sent.
+These calls are reported per seller as `couldNotTell`, with the HTTP status the seller returned in
+`couldNotTellResponses` and under the `outcomes` key `could_not_tell_sent_no_input`, and are left out of `deliveryRate`. `judged` is the number of charged calls that remain, and
+`deliveryRate` is null when it is zero. A call sent with no input that delivered stays in `judged`, because a delivery
+is proof whatever was sent. Only an HTTP 2xx or 4xx answer is treated as could not tell. A 5xx or no answer stays in the rate. The rate therefore leans in the seller's favour and is to be read together with `couldNotTell`. The charge itself is a fact and stays in `charged`.
+The records and the anchored roots are unchanged by this rule. `verify.mjs` and each round's `verdicts.json` keep the
+raw outcome of every call, so they still print the rate over all charged calls (42 of 51 in round 3, 33 of 47 in
+round 4). The rule was added on 2026-10-14 and applied to rounds 3 and 4. Before that date the page counted these
+calls against the seller: 9 calls for api.aisa.one in round 3 and 14 calls for np.orthogonal.com in round 4.
 
 ## Publishing
 Seller hosts are labelled Host A, B, … until each has had 72 hours with its own results. Per-`payTo` JSON is

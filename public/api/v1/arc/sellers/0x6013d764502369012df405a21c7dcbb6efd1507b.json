@@ -4,6 +4,9 @@
  "purchases": 15,
  "charged": 15,
  "delivered": 15,
+ "couldNotTell": 0,
+ "couldNotTellResponses": {},
+ "judged": 15,
  "outcomes": {
   "delivered": 15
  },
